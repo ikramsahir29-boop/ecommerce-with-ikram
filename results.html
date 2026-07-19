@@ -235,6 +235,51 @@ footer a:hover{color:var(--amber)}
 /* ---------- Portfolio screenshots ---------- */
 .pf-shot{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--line)}
 
+
+/* ---------- 3D Services Ring ---------- */
+.ring-stage{position:relative;height:440px;margin-top:30px;perspective:1200px;display:flex;align-items:center;justify-content:center}
+.ring3d{position:absolute;width:1px;height:1px;top:50%;left:50%;transform-style:preserve-3d;animation:ringspin 36s linear infinite}
+.ring-stage:hover .ring3d{animation-play-state:paused}
+@keyframes ringspin{from{transform:rotateX(-8deg) rotateY(0deg)}to{transform:rotateX(-8deg) rotateY(360deg)}}
+.ring-item{position:absolute;top:50%;left:50%;width:190px;margin-left:-95px;margin-top:-56px;padding:20px 16px;border-radius:14px;text-align:center;text-decoration:none;backface-visibility:hidden;background:linear-gradient(160deg,rgba(255,255,255,.13),rgba(255,255,255,.05));border:1px solid rgba(127,224,176,.35);backdrop-filter:blur(4px);color:#EAF4F1;transition:border-color .2s}
+.ring-item:hover{border-color:var(--amber)}
+.ring-item b{display:block;font-family:var(--display);font-size:1.05rem;color:#fff;letter-spacing:-.01em}
+.ring-item span{display:block;margin-top:6px;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:#7FE0B0;text-transform:uppercase}
+.ri-1{transform:rotateY(0deg) translateZ(330px)}
+.ri-2{transform:rotateY(45deg) translateZ(330px)}
+.ri-3{transform:rotateY(90deg) translateZ(330px)}
+.ri-4{transform:rotateY(135deg) translateZ(330px)}
+.ri-5{transform:rotateY(180deg) translateZ(330px)}
+.ri-6{transform:rotateY(225deg) translateZ(330px)}
+.ri-7{transform:rotateY(270deg) translateZ(330px)}
+.ri-8{transform:rotateY(315deg) translateZ(330px)}
+.ring-hub{position:relative;z-index:2;width:190px;height:190px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#1E7A5A,#0B2E33 75%);border:2px solid rgba(232,163,61,.6);box-shadow:0 0 60px -10px rgba(127,224,176,.35), inset 0 0 40px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;text-align:center}
+.ring-hub-inner strong{display:block;font-family:var(--display);font-size:1.25rem;color:#fff;letter-spacing:-.02em}
+.ring-hub-top,.ring-hub-bottom{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;color:#7FE0B0}
+.ring-hub-top{margin-bottom:6px}
+.ring-hub-bottom{margin-top:8px;color:var(--amber)}
+@media(max-width:920px){
+  .ring-stage{height:380px}
+  .ring-item{width:150px;margin-left:-75px;padding:14px 10px}
+  .ri-1{transform:rotateY(0deg) translateZ(230px)}.ri-2{transform:rotateY(45deg) translateZ(230px)}
+  .ri-3{transform:rotateY(90deg) translateZ(230px)}.ri-4{transform:rotateY(135deg) translateZ(230px)}
+  .ri-5{transform:rotateY(180deg) translateZ(230px)}.ri-6{transform:rotateY(225deg) translateZ(230px)}
+  .ri-7{transform:rotateY(270deg) translateZ(230px)}.ri-8{transform:rotateY(315deg) translateZ(230px)}
+  .ring-hub{width:150px;height:150px}
+}
+@media(max-width:640px){
+  .ring-stage{height:330px}
+  .ring-item{width:126px;margin-left:-63px}
+  .ring-item b{font-size:.9rem}
+  .ri-1{transform:rotateY(0deg) translateZ(170px)}.ri-2{transform:rotateY(45deg) translateZ(170px)}
+  .ri-3{transform:rotateY(90deg) translateZ(170px)}.ri-4{transform:rotateY(135deg) translateZ(170px)}
+  .ri-5{transform:rotateY(180deg) translateZ(170px)}.ri-6{transform:rotateY(225deg) translateZ(170px)}
+  .ri-7{transform:rotateY(270deg) translateZ(170px)}.ri-8{transform:rotateY(315deg) translateZ(170px)}
+  .ring-hub{width:120px;height:120px}
+  .ring-hub-inner strong{font-size:1rem}
+}
+@media (prefers-reduced-motion:reduce){.ring3d{animation:none;transform:rotateX(-8deg) rotateY(20deg)}}
+
 </style>
 </head>
 <body>

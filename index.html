@@ -238,6 +238,51 @@ footer a:hover{color:var(--amber)}
 /* ---------- Portfolio screenshots ---------- */
 .pf-shot{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--line)}
 
+
+/* ---------- 3D Services Ring ---------- */
+.ring-stage{position:relative;height:440px;margin-top:30px;perspective:1200px;display:flex;align-items:center;justify-content:center}
+.ring3d{position:absolute;width:1px;height:1px;top:50%;left:50%;transform-style:preserve-3d;animation:ringspin 36s linear infinite}
+.ring-stage:hover .ring3d{animation-play-state:paused}
+@keyframes ringspin{from{transform:rotateX(-8deg) rotateY(0deg)}to{transform:rotateX(-8deg) rotateY(360deg)}}
+.ring-item{position:absolute;top:50%;left:50%;width:190px;margin-left:-95px;margin-top:-56px;padding:20px 16px;border-radius:14px;text-align:center;text-decoration:none;backface-visibility:hidden;background:linear-gradient(160deg,rgba(255,255,255,.13),rgba(255,255,255,.05));border:1px solid rgba(127,224,176,.35);backdrop-filter:blur(4px);color:#EAF4F1;transition:border-color .2s}
+.ring-item:hover{border-color:var(--amber)}
+.ring-item b{display:block;font-family:var(--display);font-size:1.05rem;color:#fff;letter-spacing:-.01em}
+.ring-item span{display:block;margin-top:6px;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:#7FE0B0;text-transform:uppercase}
+.ri-1{transform:rotateY(0deg) translateZ(330px)}
+.ri-2{transform:rotateY(45deg) translateZ(330px)}
+.ri-3{transform:rotateY(90deg) translateZ(330px)}
+.ri-4{transform:rotateY(135deg) translateZ(330px)}
+.ri-5{transform:rotateY(180deg) translateZ(330px)}
+.ri-6{transform:rotateY(225deg) translateZ(330px)}
+.ri-7{transform:rotateY(270deg) translateZ(330px)}
+.ri-8{transform:rotateY(315deg) translateZ(330px)}
+.ring-hub{position:relative;z-index:2;width:190px;height:190px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#1E7A5A,#0B2E33 75%);border:2px solid rgba(232,163,61,.6);box-shadow:0 0 60px -10px rgba(127,224,176,.35), inset 0 0 40px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;text-align:center}
+.ring-hub-inner strong{display:block;font-family:var(--display);font-size:1.25rem;color:#fff;letter-spacing:-.02em}
+.ring-hub-top,.ring-hub-bottom{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;color:#7FE0B0}
+.ring-hub-top{margin-bottom:6px}
+.ring-hub-bottom{margin-top:8px;color:var(--amber)}
+@media(max-width:920px){
+  .ring-stage{height:380px}
+  .ring-item{width:150px;margin-left:-75px;padding:14px 10px}
+  .ri-1{transform:rotateY(0deg) translateZ(230px)}.ri-2{transform:rotateY(45deg) translateZ(230px)}
+  .ri-3{transform:rotateY(90deg) translateZ(230px)}.ri-4{transform:rotateY(135deg) translateZ(230px)}
+  .ri-5{transform:rotateY(180deg) translateZ(230px)}.ri-6{transform:rotateY(225deg) translateZ(230px)}
+  .ri-7{transform:rotateY(270deg) translateZ(230px)}.ri-8{transform:rotateY(315deg) translateZ(230px)}
+  .ring-hub{width:150px;height:150px}
+}
+@media(max-width:640px){
+  .ring-stage{height:330px}
+  .ring-item{width:126px;margin-left:-63px}
+  .ring-item b{font-size:.9rem}
+  .ri-1{transform:rotateY(0deg) translateZ(170px)}.ri-2{transform:rotateY(45deg) translateZ(170px)}
+  .ri-3{transform:rotateY(90deg) translateZ(170px)}.ri-4{transform:rotateY(135deg) translateZ(170px)}
+  .ri-5{transform:rotateY(180deg) translateZ(170px)}.ri-6{transform:rotateY(225deg) translateZ(170px)}
+  .ri-7{transform:rotateY(270deg) translateZ(170px)}.ri-8{transform:rotateY(315deg) translateZ(170px)}
+  .ring-hub{width:120px;height:120px}
+  .ring-hub-inner strong{font-size:1rem}
+}
+@media (prefers-reduced-motion:reduce){.ring3d{animation:none;transform:rotateX(-8deg) rotateY(20deg)}}
+
 </style>
 <script type="application/ld+json">
 {
@@ -353,51 +398,37 @@ footer a:hover{color:var(--amber)}
   </div>
 </section>
 
-<!-- SERVICES OVERVIEW -->
-<section style="padding-top:0">
+<!-- SERVICES RING (3D) -->
+<section id="services-ring" style="background:linear-gradient(135deg,#0B2E33 0%,#0E3A40 60%,#155A5E 100%);overflow:hidden">
   <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">What I Do</span>
-      <h2>Every service, tested on my own accounts first</h2>
-      <p class="lead">I only offer services I run daily in my own business. That's the difference between theory and a working playbook.</p>
+    <div class="section-head" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="eyebrow" style="color:#7FE0B0">What We Do</span>
+      <h2 style="color:#fff">Our Services Universe</h2>
+      <p class="lead" style="color:#B9D2CB;margin:14px auto 0">Every marketplace we operate — rotating around one operator. Hover to pause, tap any panel to explore.</p>
     </div>
-    <div class="grid-3">
-      <div class="card reveal">
-        <span class="tag">Amazon · UK / USA / AU</span>
-        <h3>Amazon Wholesale, Private Label &amp; White Label</h3>
-        <p>Product hunting, brand &amp; supplier research, listing SEO, PPC management, A+ Content, account audits and full store management.</p>
-        <a class="card-link" href="services.html#amazon">All Amazon services →</a>
+
+    <div class="ring-stage">
+      <div class="ring-hub">
+        <div class="ring-hub-inner">
+          <span class="ring-hub-top">ECOMMERCE</span>
+          <strong>With Ikram</strong>
+          <span class="ring-hub-bottom">8 SERVICE LINES</span>
+        </div>
       </div>
-      <div class="card reveal">
-        <span class="tag">TikTok Shop · UK / USA</span>
-        <h3>TikTok Shop Growth</h3>
-        <p>Shop setup, white-label product research, SEO listings, order management, violation appeals and full store management.</p>
-        <a class="card-link" href="services.html#tiktok">All TikTok services →</a>
+      <div class="ring3d">
+        <a class="ring-item ri-1" href="services.html#amazon"><b>Amazon</b><span>Wholesale · PL · WL</span></a>
+        <a class="ring-item ri-2" href="services.html#tiktok"><b>TikTok Shop</b><span>White Label Growth</span></a>
+        <a class="ring-item ri-3" href="services.html#ebay"><b>eBay</b><span>Dropshipping</span></a>
+        <a class="ring-item ri-4" href="services.html#onbuy"><b>OnBuy</b><span>Selling &amp; Automation</span></a>
+        <a class="ring-item ri-5" href="services.html#other"><b>Etsy</b><span>Store &amp; SEO</span></a>
+        <a class="ring-item ri-6" href="services.html#other"><b>Shopify</b><span>Development</span></a>
+        <a class="ring-item ri-7" href="services.html#other"><b>Walmart</b><span>Marketplace</span></a>
+        <a class="ring-item ri-8" href="services.html#va"><b>Virtual Assistant</b><span>All Marketplaces</span></a>
       </div>
-      <div class="card reveal">
-        <span class="tag">eBay · All Regions</span>
-        <h3>eBay Dropshipping &amp; Listings</h3>
-        <p>Account setup, dropshipping systems, title &amp; SEO optimisation, order processing and store management.</p>
-        <a class="card-link" href="services.html#ebay">All eBay services →</a>
-      </div>
-      <div class="card reveal">
-        <span class="tag">OnBuy · UK</span>
-        <h3>OnBuy Selling &amp; Automation</h3>
-        <p>Seller setup, bulk listing, order management and API integration — from the developer of a public OnBuy Chrome extension.</p>
-        <a class="card-link" href="services.html#onbuy">All OnBuy services →</a>
-      </div>
-      <div class="card reveal">
-        <span class="tag">Etsy · Shopify · Walmart</span>
-        <h3>Other Marketplaces</h3>
-        <p>Store setup, product listing, SEO and ongoing management for Etsy, Shopify and Walmart Marketplace.</p>
-        <a class="card-link" href="services.html#other">See details →</a>
-      </div>
-      <div class="card reveal">
-        <span class="tag">Virtual Assistant</span>
-        <h3>Dedicated VA Services</h3>
-        <p>Trained VA support for any marketplace — customer support, inventory, product hunting, listing optimisation and admin.</p>
-        <a class="card-link" href="services.html#va">VA options →</a>
-      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:26px">
+      <a class="btn btn-amber" href="services.html">Explore All Services</a>
     </div>
   </div>
 </section>
