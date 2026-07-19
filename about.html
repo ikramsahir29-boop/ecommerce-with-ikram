@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Ikram | 6 Years of Real Marketplace Selling — Ecommerce With Ikram</title>
+<meta name="description" content="Meet Ikram: a working ecommerce seller since 2021 across Amazon UK/USA/Australia, eBay, TikTok Shop and OnBuy — and builder of his own marketplace automation tools.">
+<link rel="canonical" href="https://ecommercewithikram.com/about.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Ecommerce With Ikram — shared styles
+   Palette: paper #F2F4F3 · ink #14201E · petrol #0E3A40 · amber #E8A33D · green #1E7A5A
+   Type: Archivo (display) · IBM Plex Sans (body) · IBM Plex Mono (data) */
+
+:root{
+  --paper:#F2F4F3; --surface:#FFFFFF; --ink:#14201E; --muted:#5A6B67;
+  --petrol:#0E3A40; --petrol-2:#155A5E; --amber:#E8A33D; --green:#1E7A5A;
+  --line:#DDE3E1; --radius:14px;
+  --display:'Archivo',sans-serif; --body:'IBM Plex Sans',sans-serif; --mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;font-size:16.5px}
+img{max-width:100%}
+a{color:inherit}
+.container{max-width:1140px;margin:0 auto;padding:0 22px}
+
+/* ---------- Nav ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(242,244,243,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--display);font-weight:800;font-size:1.15rem;letter-spacing:-.02em;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo .dot{width:10px;height:10px;border-radius:2px;background:var(--amber);display:inline-block}
+.logo span.ew{color:var(--petrol)}
+nav ul{display:flex;gap:26px;list-style:none;align-items:center}
+nav a{text-decoration:none;font-size:.95rem;color:var(--muted);font-weight:500}
+nav a:hover,nav a.active{color:var(--petrol)}
+nav a.active{border-bottom:2px solid var(--amber);padding-bottom:3px}
+.nav-cta{background:var(--petrol);color:#fff !important;padding:9px 18px;border-radius:9px;font-weight:600}
+.nav-cta:hover{background:var(--petrol-2)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:7px 10px;font-size:1.1rem;cursor:pointer;color:var(--petrol)}
+
+/* ---------- Type & shared ---------- */
+h1,h2,h3{font-family:var(--display);letter-spacing:-.025em;line-height:1.12}
+h1{font-size:clamp(2.1rem,5vw,3.4rem);font-weight:800}
+h2{font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:800}
+h3{font-size:1.12rem;font-weight:700}
+.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:14px;display:block}
+.lead{color:var(--muted);font-size:1.08rem;max-width:640px}
+section{padding:76px 0}
+.section-head{margin-bottom:42px;max-width:720px}
+.btn{display:inline-block;text-decoration:none;font-weight:600;border-radius:10px;padding:13px 26px;font-size:1rem;transition:.18s}
+.btn-primary{background:var(--petrol);color:#fff}
+.btn-primary:hover{background:var(--petrol-2);transform:translateY(-1px)}
+.btn-amber{background:var(--amber);color:var(--ink)}
+.btn-amber:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.btn-ghost{border:1.5px solid var(--petrol);color:var(--petrol)}
+.btn-ghost:hover{background:var(--petrol);color:#fff}
+.mono{font-family:var(--mono)}
+
+/* ---------- Hero (dark, colorful) ---------- */
+.hero{padding:84px 0 70px;position:relative;overflow:hidden;background:linear-gradient(135deg,#0B2E33 0%,#0E3A40 55%,#155A5E 100%);color:#EAF4F1}
+.hero h1{color:#fff}
+.hero .lead{color:#B9D2CB}
+.hero .eyebrow{color:#7FE0B0}
+.hero-note{color:#8FB0A8 !important}
+.hero .btn-ghost{border-color:#7FE0B0;color:#7FE0B0}
+.hero .btn-ghost:hover{background:#7FE0B0;color:#0B2E33}
+.hero .chip{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.18);color:#B9D2CB}
+.hero .chip b{color:var(--amber)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1 em{font-style:normal;color:var(--petrol);position:relative}
+.hero h1 em{color:var(--amber)}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:10px;background:rgba(232,163,61,.25);z-index:0;border-radius:3px}
+.hero .lead{margin:20px 0 30px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-note{margin-top:16px;font-size:.86rem;color:var(--muted)}
+
+/* Signature: operator ledger card */
+.ledger{background:var(--petrol);color:#DCEAE6;border-radius:var(--radius);padding:26px 24px;font-family:var(--mono);font-size:.86rem;box-shadow:0 24px 60px -24px rgba(14,58,64,.55);position:relative}
+.ledger::before{content:"LIVE · SELLER ACCOUNT DATA";position:absolute;top:-11px;left:20px;background:var(--amber);color:var(--ink);font-size:.66rem;letter-spacing:.12em;padding:3px 10px;border-radius:5px;font-weight:700}
+.ledger-row{display:flex;justify-content:space-between;padding:11px 2px;border-bottom:1px dashed rgba(220,234,230,.22)}
+.ledger-row:last-child{border-bottom:none}
+.ledger-row .k{color:#9DBBB4}
+.ledger-row .v{font-weight:700;color:#fff}
+.ledger-row .v.up{color:#7FE0B0}
+.ledger-row .v.amber{color:var(--amber)}
+
+/* ---------- Marketplace chips ---------- */
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.chip{font-family:var(--mono);font-size:.78rem;border:1px solid var(--line);background:var(--surface);border-radius:7px;padding:7px 13px;color:var(--muted)}
+.chip b{color:var(--petrol)}
+
+/* ---------- Cards / grids ---------- */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--petrol-2);border-radius:var(--radius);padding:28px 26px;transition:.2s}
+.card:nth-child(3n+2){border-top-color:var(--amber)}
+.card:nth-child(3n){border-top-color:var(--green)}
+.card:hover{border-color:var(--petrol);box-shadow:0 14px 34px -18px rgba(14,58,64,.35);transform:translateY(-3px)}
+.card h3{margin-bottom:10px}
+.card p{color:var(--muted);font-size:.95rem}
+.card .tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;color:var(--green);text-transform:uppercase;display:block;margin-bottom:12px}
+.card ul{list-style:none;margin-top:14px}
+.card ul li{padding:6px 0 6px 24px;position:relative;font-size:.93rem;color:var(--ink)}
+.card ul li::before{content:"→";position:absolute;left:0;color:var(--amber);font-weight:700}
+.card-link{display:inline-block;margin-top:16px;font-weight:600;color:var(--petrol);text-decoration:none;font-size:.93rem}
+.card-link:hover{color:var(--amber)}
+
+/* ---------- Stats band ---------- */
+.stats{background:var(--amber);padding:44px 0}
+.stats .n{color:var(--ink) !important}
+.stats .l{color:#5E4A1E !important;font-weight:600}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat .n{font-family:var(--mono);font-size:2rem;font-weight:700;color:var(--petrol)}
+.stat .l{font-size:.85rem;color:var(--muted);margin-top:4px}
+
+/* ---------- Process ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:step}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.step::before{counter-increment:step;content:"0" counter(step);font-family:var(--mono);color:var(--amber);font-weight:700;font-size:1.05rem;display:block;margin-bottom:12px}
+.step h3{font-size:1rem;margin-bottom:8px}
+.step p{font-size:.9rem;color:var(--muted)}
+
+/* ---------- Quote / testimonial ---------- */
+.quote{background:var(--petrol);color:#E7F1EE;border-radius:var(--radius);padding:40px 38px}
+.quote p{font-size:1.15rem;line-height:1.7}
+.quote .who{margin-top:18px;font-family:var(--mono);font-size:.82rem;color:#9DBBB4}
+
+/* ---------- FAQ ---------- */
+details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:12px}
+details summary{cursor:pointer;font-weight:600;font-family:var(--display);list-style:none;display:flex;justify-content:space-between;align-items:center}
+details summary::after{content:"+";font-family:var(--mono);color:var(--amber);font-size:1.2rem}
+details[open] summary::after{content:"–"}
+details p{margin-top:12px;color:var(--muted);font-size:.95rem}
+
+/* ---------- CTA band ---------- */
+.cta-band{background:linear-gradient(120deg,var(--petrol),var(--petrol-2));border-radius:var(--radius);padding:52px 46px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.cta-band h2{color:#fff}
+.cta-band p{color:#C7DAD5;margin-top:10px;max-width:520px}
+
+/* ---------- Tables (results) ---------- */
+.data-table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;font-size:.93rem}
+.data-table th{background:var(--petrol);color:#fff;font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;padding:13px 16px;text-align:left}
+.data-table td{padding:13px 16px;border-top:1px solid var(--line)}
+.data-table td.mono{font-family:var(--mono);font-weight:600}
+.good{color:var(--green);font-weight:700}
+.bad{color:#B4552D;font-weight:700}
+
+/* ---------- Forms ---------- */
+form .field{margin-bottom:18px}
+label{display:block;font-weight:600;font-size:.9rem;margin-bottom:7px}
+input,select,textarea{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:10px;font-family:var(--body);font-size:1rem;background:var(--surface);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--petrol)}
+textarea{min-height:130px;resize:vertical}
+
+/* ---------- Footer ---------- */
+footer{background:var(--ink);color:#B9C6C2;padding:56px 0 30px;margin-top:80px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px;margin-bottom:38px}
+footer h4{color:#fff;font-family:var(--display);font-size:.95rem;margin-bottom:14px}
+footer ul{list-style:none}
+footer ul li{margin-bottom:9px}
+footer a{color:#B9C6C2;text-decoration:none;font-size:.9rem}
+footer a:hover{color:var(--amber)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;font-size:.82rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.foot-brand p{font-size:.9rem;max-width:280px;margin-top:10px}
+
+/* ---------- WhatsApp sticky ---------- */
+.wa{position:fixed;right:20px;bottom:20px;z-index:60;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px -8px rgba(0,0,0,.4);text-decoration:none}
+.wa svg{width:30px;height:30px}
+.wa:hover{transform:scale(1.07)}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ---------- Page hero (inner pages) ---------- */
+.page-hero{padding:66px 0 50px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#E3EEEA 0%,var(--paper) 100%)}
+.page-hero .lead{margin-top:16px}
+.crumb{font-family:var(--mono);font-size:.78rem;color:var(--muted);margin-bottom:18px}
+.crumb a{text-decoration:none;color:var(--green)}
+
+/* ---------- Responsive ---------- */
+@media(max-width:920px){
+  .hero-grid,.grid-3,.steps,.foot-grid{grid-template-columns:1fr 1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .hero-grid,.grid-3,.grid-2,.steps,.foot-grid{grid-template-columns:1fr}
+  nav ul{position:fixed;inset:68px 0 auto 0;background:var(--surface);flex-direction:column;padding:22px;border-bottom:1px solid var(--line);display:none;gap:16px}
+  nav ul.open{display:flex}
+  .burger{display:block}
+  section{padding:56px 0}
+  .cta-band{padding:36px 26px}
+}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+
+
+/* ---------- Portfolio ---------- */
+.pf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pf-item{border-radius:var(--radius);overflow:hidden;background:var(--surface);border:1px solid var(--line);transition:.2s;display:flex;flex-direction:column}
+.pf-item:hover{transform:translateY(-4px);box-shadow:0 18px 40px -20px rgba(14,58,64,.4)}
+.pf-cover{height:150px;display:flex;align-items:flex-end;padding:18px;font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;color:#fff;text-transform:uppercase}
+.pf-c1{background:linear-gradient(135deg,#0E3A40,#1E7A5A)}
+.pf-c2{background:linear-gradient(135deg,#B4552D,#E8A33D)}
+.pf-c3{background:linear-gradient(135deg,#155A5E,#2A8FA0)}
+.pf-c4{background:linear-gradient(135deg,#3A2E5E,#7A5AC8)}
+.pf-c5{background:linear-gradient(135deg,#5E1E3A,#C84A6B)}
+.pf-c6{background:linear-gradient(135deg,#14201E,#3E5B54)}
+.pf-body{padding:20px 22px 24px}
+.pf-body h3{font-size:1rem;margin-bottom:8px}
+.pf-body p{font-size:.9rem;color:var(--muted)}
+.pf-metric{font-family:var(--mono);font-weight:700;color:var(--green);font-size:.85rem;margin-top:12px;display:block}
+@media(max-width:920px){.pf-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.pf-grid{grid-template-columns:1fr}}
+
+/* ---------- Home contact section ---------- */
+.home-contact{background:linear-gradient(135deg,#0B2E33,#155A5E);border-radius:var(--radius);padding:46px;display:grid;grid-template-columns:1fr 1fr;gap:40px;color:#EAF4F1}
+.home-contact h2{color:#fff}
+.home-contact p{color:#B9D2CB}
+.home-contact label{color:#DCEAE6}
+.home-contact input,.home-contact select,.home-contact textarea{border-color:transparent}
+@media(max-width:920px){.home-contact{grid-template-columns:1fr;padding:32px 24px}}
+
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Ikram","jobTitle":"Ecommerce Operator & Consultant","knowsAbout":["Amazon FBA","Amazon PPC","TikTok Shop","eBay Dropshipping","OnBuy","Marketplace Automation"]}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html"><span class="dot"></span><span class="ew">Ecommerce With</span>&nbsp;Ikram</a>
+    <nav aria-label="Main">
+      <button class="burger" aria-expanded="false" aria-label="Menu">☰</button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="results.html">Results</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="crumb"><a href="index.html">Home</a> / About</div>
+    <span class="eyebrow">The Person Behind The Brand</span>
+    <h1>I'm Ikram. I sell before I advise.</h1>
+    <p class="lead">Since 2021 I've built and run marketplace businesses across four platforms and three regions — as a solo operator managing my own money. Everything I offer as a service, I first proved in my own accounts.</p>
+  </div>
+</div>
+
+<!-- STORY -->
+<section>
+  <div class="container">
+    <div class="grid-2" style="align-items:start">
+      <div>
+        <span class="eyebrow">My Story</span>
+        <h2>From one account to a multi-marketplace operation</h2>
+        <p style="margin-top:18px;color:var(--muted)">I started selling in 2021. No agency, no team — just Seller Central, spreadsheets and a decision to learn every marketplace properly instead of superficially.</p>
+        <p style="margin-top:14px;color:var(--muted)">Today I run <strong style="color:var(--ink)">Amazon wholesale and private label across UK, USA and Australia</strong>, <strong style="color:var(--ink)">eBay dropshipping</strong>, <strong style="color:var(--ink)">OnBuy</strong> in the UK, and <strong style="color:var(--ink)">white-label selling on TikTok Shop</strong> in the UK and USA — simultaneously, as one person.</p>
+        <p style="margin-top:14px;color:var(--muted)">Running everything solo forced me to become good at two things most agencies never learn: <strong style="color:var(--ink)">ruthless prioritisation</strong> (only doing what data says will move the needle) and <strong style="color:var(--ink)">automation</strong> (building software so systems work while I sleep).</p>
+        <p style="margin-top:14px;color:var(--muted)">Under the "Ecommerce With Ikram" brand I also teach what I learn — because explaining something publicly is the best test of whether you truly understand it.</p>
+      </div>
+      <div class="ledger reveal" style="align-self:center">
+        <div class="ledger-row"><span class="k">selling_since</span><span class="v amber">2021</span></div>
+        <div class="ledger-row"><span class="k">amazon</span><span class="v">Wholesale · PL · WL — UK/US/AU</span></div>
+        <div class="ledger-row"><span class="k">ebay</span><span class="v">Dropshipping — multi-region</span></div>
+        <div class="ledger-row"><span class="k">tiktok_shop</span><span class="v">White Label — UK/US</span></div>
+        <div class="ledger-row"><span class="k">onbuy</span><span class="v">Active seller + tool developer</span></div>
+        <div class="ledger-row"><span class="k">team_size</span><span class="v up">1 (by design)</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUILDER -->
+<section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Operator + Builder</span>
+      <h2>I don't just use tools. I build them.</h2>
+      <p class="lead">When the software I needed didn't exist, I built it. Your account benefits from the same systems.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal">
+        <span class="tag">Public · Chrome Web Store</span>
+        <h3>OnBuy Profit Calculator</h3>
+        <p>A published Chrome extension (v3.6) that calculates real OnBuy fees and margins on-page — with fee logic verified against live Seller Central data, not guesses.</p>
+      </div>
+      <div class="card reveal">
+        <span class="tag">Internal · Full-Stack</span>
+        <h3>Marketplace Research Engine</h3>
+        <p>A custom product research platform with trend detection, product health scoring and AI-driven action recommendations — built on FastAPI, PostgreSQL and Next.js.</p>
+      </div>
+      <div class="card reveal">
+        <span class="tag">Internal · Automation</span>
+        <h3>Workflow Automation</h3>
+        <p>Custom PPC audit workflows, sourcing pipelines and content automation that remove manual dependency — the same efficiency I bring to client accounts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPLES -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How I Work</span>
+      <h2>Working principles</h2>
+    </div>
+    <div class="grid-2">
+      <div class="card reveal"><h3>Evidence before advice</h3><p>Decisions come from reports and real data — search terms, conversion rates, fee structures — never from "industry best practice" alone.</p></div>
+      <div class="card reveal"><h3>Honest feasibility first</h3><p>If your plan is startup-scale when your resources are solo-scale, I'll say so and show you the lean version that actually works.</p></div>
+      <div class="card reveal"><h3>Confirm at every stage</h3><p>Step-by-step execution with your sign-off. No surprises on your account, ever.</p></div>
+      <div class="card reveal"><h3>Validate small, then scale</h3><p>Test with the smallest possible bet, prove it with numbers, then put real money behind it. It's how I built my own business.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div>
+        <h2>Work directly with the operator</h2>
+        <p>No account managers, no handoffs. Send your goals and get an honest, data-backed starting point.</p>
+      </div>
+      <a class="btn btn-amber" href="contact.html">Get In Touch</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="index.html" style="color:#fff"><span class="dot"></span>Ecommerce With Ikram</a>
+        <p>Marketplace growth services from a working seller — Amazon, eBay, TikTok Shop and OnBuy across UK, USA and Australia.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#amazon">Amazon Services</a></li>
+          <li><a href="services.html#tiktok">TikTok Shop</a></li>
+          <li><a href="services.html#ebay">eBay</a></li>
+          <li><a href="services.html#onbuy">OnBuy</a></li>
+          <li><a href="services.html#va">Virtual Assistant</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Ikram</a></li>
+          <li><a href="results.html">Results &amp; Case Studies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get Started</h4>
+        <ul>
+          <li><a href="contact.html">Free Account Audit</a></li>
+          <li><a href="https://wa.me/440000000000">WhatsApp</a></li>
+          <li><a href="mailto:hello@ecommercewithikram.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Ecommerce With Ikram. All rights reserved.</span>
+      <span class="mono">UK · USA · AU</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/440000000000" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-2.9-1.3 11.4 11.4 0 0 1-3.4-3.7c-.6-1-.9-2-.9-2.6 0-.7.3-1.3.7-1.7.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.1.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.5.1.6-.1l.7-.8c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.4 0 .1 0 .5-.3.7Z"/></svg>
+</a>
+
+<script>
+// Ecommerce With Ikram — shared scripts
+document.addEventListener('DOMContentLoaded', () => {
+  // Mobile nav
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('nav ul');
+  if (burger && menu) {
+    burger.addEventListener('click', () => {
+      menu.classList.toggle('open');
+      burger.setAttribute('aria-expanded', menu.classList.contains('open'));
+    });
+  }
+
+  // Scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Contact form → opens email client with prefilled message (no backend needed)
+  const form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      const d = Object.fromEntries(new FormData(form).entries());
+      const body = encodeURIComponent(
+        `Name: ${d.name}\nEmail: ${d.email}\nWhatsApp: ${d.whatsapp || '-'}\nMarketplace: ${d.marketplace}\nService: ${d.service}\n\nMessage:\n${d.message}`
+      );
+      window.location.href = `mailto:hello@ecommercewithikram.com?subject=${encodeURIComponent('New enquiry — ' + d.service)}&body=${body}`;
+      const ok = document.getElementById('form-ok');
+      if (ok) ok.style.display = 'block';
+    });
+  }
+});
+
+</script>
+</body>
+</html>

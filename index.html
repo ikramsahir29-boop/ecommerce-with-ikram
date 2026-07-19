@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecommerce With Ikram | Amazon, eBay, TikTok Shop & OnBuy Growth Services</title>
+<meta name="description" content="Ecommerce services run by a real seller. Amazon Wholesale & Private Label, TikTok Shop, eBay dropshipping and OnBuy management across UK, USA and Australia — backed by 6 years of hands-on selling.">
+<link rel="canonical" href="https://ecommercewithikram.com/">
+<meta property="og:title" content="Ecommerce With Ikram — Marketplace Growth, Run By An Operator">
+<meta property="og:description" content="Amazon, eBay, TikTok Shop & OnBuy services from a seller who runs live accounts in the same marketplaces.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Ecommerce With Ikram — shared styles
+   Palette: paper #F2F4F3 · ink #14201E · petrol #0E3A40 · amber #E8A33D · green #1E7A5A
+   Type: Archivo (display) · IBM Plex Sans (body) · IBM Plex Mono (data) */
+
+:root{
+  --paper:#F2F4F3; --surface:#FFFFFF; --ink:#14201E; --muted:#5A6B67;
+  --petrol:#0E3A40; --petrol-2:#155A5E; --amber:#E8A33D; --green:#1E7A5A;
+  --line:#DDE3E1; --radius:14px;
+  --display:'Archivo',sans-serif; --body:'IBM Plex Sans',sans-serif; --mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;font-size:16.5px}
+img{max-width:100%}
+a{color:inherit}
+.container{max-width:1140px;margin:0 auto;padding:0 22px}
+
+/* ---------- Nav ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(242,244,243,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--display);font-weight:800;font-size:1.15rem;letter-spacing:-.02em;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo .dot{width:10px;height:10px;border-radius:2px;background:var(--amber);display:inline-block}
+.logo span.ew{color:var(--petrol)}
+nav ul{display:flex;gap:26px;list-style:none;align-items:center}
+nav a{text-decoration:none;font-size:.95rem;color:var(--muted);font-weight:500}
+nav a:hover,nav a.active{color:var(--petrol)}
+nav a.active{border-bottom:2px solid var(--amber);padding-bottom:3px}
+.nav-cta{background:var(--petrol);color:#fff !important;padding:9px 18px;border-radius:9px;font-weight:600}
+.nav-cta:hover{background:var(--petrol-2)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:7px 10px;font-size:1.1rem;cursor:pointer;color:var(--petrol)}
+
+/* ---------- Type & shared ---------- */
+h1,h2,h3{font-family:var(--display);letter-spacing:-.025em;line-height:1.12}
+h1{font-size:clamp(2.1rem,5vw,3.4rem);font-weight:800}
+h2{font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:800}
+h3{font-size:1.12rem;font-weight:700}
+.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--green);margin-bottom:14px;display:block}
+.lead{color:var(--muted);font-size:1.08rem;max-width:640px}
+section{padding:76px 0}
+.section-head{margin-bottom:42px;max-width:720px}
+.btn{display:inline-block;text-decoration:none;font-weight:600;border-radius:10px;padding:13px 26px;font-size:1rem;transition:.18s}
+.btn-primary{background:var(--petrol);color:#fff}
+.btn-primary:hover{background:var(--petrol-2);transform:translateY(-1px)}
+.btn-amber{background:var(--amber);color:var(--ink)}
+.btn-amber:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.btn-ghost{border:1.5px solid var(--petrol);color:var(--petrol)}
+.btn-ghost:hover{background:var(--petrol);color:#fff}
+.mono{font-family:var(--mono)}
+
+/* ---------- Hero (dark, colorful) ---------- */
+.hero{padding:84px 0 70px;position:relative;overflow:hidden;background:linear-gradient(135deg,#0B2E33 0%,#0E3A40 55%,#155A5E 100%);color:#EAF4F1}
+.hero h1{color:#fff}
+.hero .lead{color:#B9D2CB}
+.hero .eyebrow{color:#7FE0B0}
+.hero-note{color:#8FB0A8 !important}
+.hero .btn-ghost{border-color:#7FE0B0;color:#7FE0B0}
+.hero .btn-ghost:hover{background:#7FE0B0;color:#0B2E33}
+.hero .chip{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.18);color:#B9D2CB}
+.hero .chip b{color:var(--amber)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1 em{font-style:normal;color:var(--petrol);position:relative}
+.hero h1 em{color:var(--amber)}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:10px;background:rgba(232,163,61,.25);z-index:0;border-radius:3px}
+.hero .lead{margin:20px 0 30px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-note{margin-top:16px;font-size:.86rem;color:var(--muted)}
+
+/* Signature: operator ledger card */
+.ledger{background:var(--petrol);color:#DCEAE6;border-radius:var(--radius);padding:26px 24px;font-family:var(--mono);font-size:.86rem;box-shadow:0 24px 60px -24px rgba(14,58,64,.55);position:relative}
+.ledger::before{content:"LIVE · SELLER ACCOUNT DATA";position:absolute;top:-11px;left:20px;background:var(--amber);color:var(--ink);font-size:.66rem;letter-spacing:.12em;padding:3px 10px;border-radius:5px;font-weight:700}
+.ledger-row{display:flex;justify-content:space-between;padding:11px 2px;border-bottom:1px dashed rgba(220,234,230,.22)}
+.ledger-row:last-child{border-bottom:none}
+.ledger-row .k{color:#9DBBB4}
+.ledger-row .v{font-weight:700;color:#fff}
+.ledger-row .v.up{color:#7FE0B0}
+.ledger-row .v.amber{color:var(--amber)}
+
+/* ---------- Marketplace chips ---------- */
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.chip{font-family:var(--mono);font-size:.78rem;border:1px solid var(--line);background:var(--surface);border-radius:7px;padding:7px 13px;color:var(--muted)}
+.chip b{color:var(--petrol)}
+
+/* ---------- Cards / grids ---------- */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--petrol-2);border-radius:var(--radius);padding:28px 26px;transition:.2s}
+.card:nth-child(3n+2){border-top-color:var(--amber)}
+.card:nth-child(3n){border-top-color:var(--green)}
+.card:hover{border-color:var(--petrol);box-shadow:0 14px 34px -18px rgba(14,58,64,.35);transform:translateY(-3px)}
+.card h3{margin-bottom:10px}
+.card p{color:var(--muted);font-size:.95rem}
+.card .tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;color:var(--green);text-transform:uppercase;display:block;margin-bottom:12px}
+.card ul{list-style:none;margin-top:14px}
+.card ul li{padding:6px 0 6px 24px;position:relative;font-size:.93rem;color:var(--ink)}
+.card ul li::before{content:"→";position:absolute;left:0;color:var(--amber);font-weight:700}
+.card-link{display:inline-block;margin-top:16px;font-weight:600;color:var(--petrol);text-decoration:none;font-size:.93rem}
+.card-link:hover{color:var(--amber)}
+
+/* ---------- Stats band ---------- */
+.stats{background:var(--amber);padding:44px 0}
+.stats .n{color:var(--ink) !important}
+.stats .l{color:#5E4A1E !important;font-weight:600}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat .n{font-family:var(--mono);font-size:2rem;font-weight:700;color:var(--petrol)}
+.stat .l{font-size:.85rem;color:var(--muted);margin-top:4px}
+
+/* ---------- Process ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:step}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.step::before{counter-increment:step;content:"0" counter(step);font-family:var(--mono);color:var(--amber);font-weight:700;font-size:1.05rem;display:block;margin-bottom:12px}
+.step h3{font-size:1rem;margin-bottom:8px}
+.step p{font-size:.9rem;color:var(--muted)}
+
+/* ---------- Quote / testimonial ---------- */
+.quote{background:var(--petrol);color:#E7F1EE;border-radius:var(--radius);padding:40px 38px}
+.quote p{font-size:1.15rem;line-height:1.7}
+.quote .who{margin-top:18px;font-family:var(--mono);font-size:.82rem;color:#9DBBB4}
+
+/* ---------- FAQ ---------- */
+details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-bottom:12px}
+details summary{cursor:pointer;font-weight:600;font-family:var(--display);list-style:none;display:flex;justify-content:space-between;align-items:center}
+details summary::after{content:"+";font-family:var(--mono);color:var(--amber);font-size:1.2rem}
+details[open] summary::after{content:"–"}
+details p{margin-top:12px;color:var(--muted);font-size:.95rem}
+
+/* ---------- CTA band ---------- */
+.cta-band{background:linear-gradient(120deg,var(--petrol),var(--petrol-2));border-radius:var(--radius);padding:52px 46px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.cta-band h2{color:#fff}
+.cta-band p{color:#C7DAD5;margin-top:10px;max-width:520px}
+
+/* ---------- Tables (results) ---------- */
+.data-table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;font-size:.93rem}
+.data-table th{background:var(--petrol);color:#fff;font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;padding:13px 16px;text-align:left}
+.data-table td{padding:13px 16px;border-top:1px solid var(--line)}
+.data-table td.mono{font-family:var(--mono);font-weight:600}
+.good{color:var(--green);font-weight:700}
+.bad{color:#B4552D;font-weight:700}
+
+/* ---------- Forms ---------- */
+form .field{margin-bottom:18px}
+label{display:block;font-weight:600;font-size:.9rem;margin-bottom:7px}
+input,select,textarea{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:10px;font-family:var(--body);font-size:1rem;background:var(--surface);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--petrol)}
+textarea{min-height:130px;resize:vertical}
+
+/* ---------- Footer ---------- */
+footer{background:var(--ink);color:#B9C6C2;padding:56px 0 30px;margin-top:80px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px;margin-bottom:38px}
+footer h4{color:#fff;font-family:var(--display);font-size:.95rem;margin-bottom:14px}
+footer ul{list-style:none}
+footer ul li{margin-bottom:9px}
+footer a{color:#B9C6C2;text-decoration:none;font-size:.9rem}
+footer a:hover{color:var(--amber)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;font-size:.82rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.foot-brand p{font-size:.9rem;max-width:280px;margin-top:10px}
+
+/* ---------- WhatsApp sticky ---------- */
+.wa{position:fixed;right:20px;bottom:20px;z-index:60;background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px -8px rgba(0,0,0,.4);text-decoration:none}
+.wa svg{width:30px;height:30px}
+.wa:hover{transform:scale(1.07)}
+
+/* ---------- Reveal ---------- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* ---------- Page hero (inner pages) ---------- */
+.page-hero{padding:66px 0 50px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#E3EEEA 0%,var(--paper) 100%)}
+.page-hero .lead{margin-top:16px}
+.crumb{font-family:var(--mono);font-size:.78rem;color:var(--muted);margin-bottom:18px}
+.crumb a{text-decoration:none;color:var(--green)}
+
+/* ---------- Responsive ---------- */
+@media(max-width:920px){
+  .hero-grid,.grid-3,.steps,.foot-grid{grid-template-columns:1fr 1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:640px){
+  .hero-grid,.grid-3,.grid-2,.steps,.foot-grid{grid-template-columns:1fr}
+  nav ul{position:fixed;inset:68px 0 auto 0;background:var(--surface);flex-direction:column;padding:22px;border-bottom:1px solid var(--line);display:none;gap:16px}
+  nav ul.open{display:flex}
+  .burger{display:block}
+  section{padding:56px 0}
+  .cta-band{padding:36px 26px}
+}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+
+
+/* ---------- Portfolio ---------- */
+.pf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pf-item{border-radius:var(--radius);overflow:hidden;background:var(--surface);border:1px solid var(--line);transition:.2s;display:flex;flex-direction:column}
+.pf-item:hover{transform:translateY(-4px);box-shadow:0 18px 40px -20px rgba(14,58,64,.4)}
+.pf-cover{height:150px;display:flex;align-items:flex-end;padding:18px;font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;color:#fff;text-transform:uppercase}
+.pf-c1{background:linear-gradient(135deg,#0E3A40,#1E7A5A)}
+.pf-c2{background:linear-gradient(135deg,#B4552D,#E8A33D)}
+.pf-c3{background:linear-gradient(135deg,#155A5E,#2A8FA0)}
+.pf-c4{background:linear-gradient(135deg,#3A2E5E,#7A5AC8)}
+.pf-c5{background:linear-gradient(135deg,#5E1E3A,#C84A6B)}
+.pf-c6{background:linear-gradient(135deg,#14201E,#3E5B54)}
+.pf-body{padding:20px 22px 24px}
+.pf-body h3{font-size:1rem;margin-bottom:8px}
+.pf-body p{font-size:.9rem;color:var(--muted)}
+.pf-metric{font-family:var(--mono);font-weight:700;color:var(--green);font-size:.85rem;margin-top:12px;display:block}
+@media(max-width:920px){.pf-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.pf-grid{grid-template-columns:1fr}}
+
+/* ---------- Home contact section ---------- */
+.home-contact{background:linear-gradient(135deg,#0B2E33,#155A5E);border-radius:var(--radius);padding:46px;display:grid;grid-template-columns:1fr 1fr;gap:40px;color:#EAF4F1}
+.home-contact h2{color:#fff}
+.home-contact p{color:#B9D2CB}
+.home-contact label{color:#DCEAE6}
+.home-contact input,.home-contact select,.home-contact textarea{border-color:transparent}
+@media(max-width:920px){.home-contact{grid-template-columns:1fr;padding:32px 24px}}
+
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Ecommerce With Ikram",
+  "description": "Operator-led ecommerce services for Amazon, eBay, TikTok Shop, OnBuy and more across UK, USA and Australia.",
+  "areaServed": ["United Kingdom","United States","Australia","Worldwide"],
+  "founder": {"@type":"Person","name":"Ikram"},
+  "url": "https://ecommercewithikram.com/"
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="logo" href="index.html"><span class="dot"></span><span class="ew">Ecommerce With</span>&nbsp;Ikram</a>
+    <nav aria-label="Main">
+      <button class="burger" aria-expanded="false" aria-label="Menu">☰</button>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="results.html">Results</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">Operator-led · Not just an agency</span>
+      <h1>Your marketplace growth, managed by someone who <em>actually sells</em>.</h1>
+      <p class="lead">Most agencies manage accounts they've never run. I sell every day on Amazon UK, USA &amp; Australia, eBay, TikTok Shop and OnBuy — and I bring the same playbooks, tools and honesty to your business.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-amber" href="contact.html">Get a Free Account Audit</a>
+        <a class="btn btn-ghost" href="services.html">Explore Services</a>
+      </div>
+      <p class="hero-note">No lock-in contracts · Direct communication · Evidence before advice</p>
+    </div>
+    <div class="ledger reveal" aria-label="Recent live results from managed accounts">
+      <div class="ledger-row"><span class="k">amazon_au.ppc.acos</span><span class="v up">88% → 69%</span></div>
+      <div class="ledger-row"><span class="k">amazon_au.cvr</span><span class="v up">4.8% → 6.4%</span></div>
+      <div class="ledger-row"><span class="k">marketplaces.live</span><span class="v">AMZ · EBAY · ONBUY · TIKTOK</span></div>
+      <div class="ledger-row"><span class="k">regions</span><span class="v">UK · USA · AU</span></div>
+      <div class="ledger-row"><span class="k">operating_since</span><span class="v amber">2021</span></div>
+      <div class="ledger-row"><span class="k">tools.shipped</span><span class="v">OnBuy Profit Calculator v3.6</span></div>
+    </div>
+  </div>
+  <div class="container chips">
+    <span class="chip"><b>Amazon</b> Wholesale · Private Label · White Label</span>
+    <span class="chip"><b>eBay</b> Dropshipping · Listings</span>
+    <span class="chip"><b>TikTok Shop</b> UK · USA</span>
+    <span class="chip"><b>OnBuy</b> UK</span>
+    <span class="chip"><b>Etsy · Shopify · Walmart</b></span>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="container stats-grid">
+    <div class="stat reveal"><div class="n">5+</div><div class="l">Years selling — since 2021</div></div>
+    <div class="stat reveal"><div class="n">4</div><div class="l">Marketplaces run live</div></div>
+    <div class="stat reveal"><div class="n">3</div><div class="l">Regions — UK, USA, AU</div></div>
+    <div class="stat reveal"><div class="n">2</div><div class="l">Own tools shipped publicly</div></div>
+  </div>
+</div>
+
+<!-- COMPANY OVERVIEW -->
+<section id="overview">
+  <div class="container">
+    <div class="grid-2" style="align-items:center;gap:46px">
+      <div>
+        <span class="eyebrow">Company Overview</span>
+        <h2>Selling since 2021. Still selling today.</h2>
+        <p style="margin-top:18px;color:var(--muted)">Ecommerce With Ikram ki bunyad 2021 mein rakhi gayi — we have been doing ecommerce since 2021, starting with a single Amazon account and growing into a multi-marketplace operation run with discipline, data and our own software.</p>
+        <p style="margin-top:14px;color:var(--muted)">Today we operate across <strong style="color:var(--ink)">Amazon (UK, USA &amp; Australia)</strong> in wholesale brand reselling and private label, <strong style="color:var(--ink)">eBay dropshipping</strong> in USA, UK and Australia, <strong style="color:var(--ink)">OnBuy UK</strong>, and <strong style="color:var(--ink)">TikTok Shop (UK &amp; USA)</strong> on a white-label model.</p>
+        <p style="margin-top:14px;color:var(--muted)">Alongside our own stores, we provide the same services to clients worldwide — audits, product research, listing SEO, PPC management, store setup and full account management — plus freelancing support for sellers who need an experienced operator on demand.</p>
+        <p style="margin-top:14px;color:var(--muted)">What makes us different: we build our own automation tools (including a public Chrome extension for OnBuy sellers), we test everything on our own money first, and we give honest feasibility assessments — even when the honest answer is "don't do this".</p>
+      </div>
+      <div>
+        <div class="card reveal" style="margin-bottom:16px">
+          <span class="tag">Established</span>
+          <h3>2021 — Active Ever Since</h3>
+          <p>Five-plus years of continuous, hands-on selling. No gap years, no theory-only phase.</p>
+        </div>
+        <div class="card reveal" style="margin-bottom:16px">
+          <span class="tag">Business Models</span>
+          <h3>Wholesale · Private Label · White Label · Dropshipping</h3>
+          <p>All four models run live in our own accounts across four marketplaces and three regions.</p>
+        </div>
+        <div class="card reveal">
+          <span class="tag">Clients &amp; Freelancing</span>
+          <h3>Services + Freelance Support</h3>
+          <p>Full-service management for stores, plus project-based freelancing for sellers, brands and agencies worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES OVERVIEW -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What I Do</span>
+      <h2>Every service, tested on my own accounts first</h2>
+      <p class="lead">I only offer services I run daily in my own business. That's the difference between theory and a working playbook.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal">
+        <span class="tag">Amazon · UK / USA / AU</span>
+        <h3>Amazon Wholesale, Private Label &amp; White Label</h3>
+        <p>Product hunting, brand &amp; supplier research, listing SEO, PPC management, A+ Content, account audits and full store management.</p>
+        <a class="card-link" href="services.html#amazon">All Amazon services →</a>
+      </div>
+      <div class="card reveal">
+        <span class="tag">TikTok Shop · UK / USA</span>
+        <h3>TikTok Shop Growth</h3>
+        <p>Shop setup, white-label product research, SEO listings, order management, violation appeals and full store management.</p>
+        <a class="card-link" href="services.html#tiktok">All TikTok services →</a>
+      </div>
+      <div class="card reveal">
+        <span class="tag">eBay · All Regions</span>
+        <h3>eBay Dropshipping &amp; Listings</h3>
+        <p>Account setup, dropshipping systems, title &amp; SEO optimisation, order processing and store management.</p>
+        <a class="card-link" href="services.html#ebay">All eBay services →</a>
+      </div>
+      <div class="card reveal">
+        <span class="tag">OnBuy · UK</span>
+        <h3>OnBuy Selling &amp; Automation</h3>
+        <p>Seller setup, bulk listing, order management and API integration — from the developer of a public OnBuy Chrome extension.</p>
+        <a class="card-link" href="services.html#onbuy">All OnBuy services →</a>
+      </div>
+      <div class="card reveal">
+        <span class="tag">Etsy · Shopify · Walmart</span>
+        <h3>Other Marketplaces</h3>
+        <p>Store setup, product listing, SEO and ongoing management for Etsy, Shopify and Walmart Marketplace.</p>
+        <a class="card-link" href="services.html#other">See details →</a>
+      </div>
+      <div class="card reveal">
+        <span class="tag">Virtual Assistant</span>
+        <h3>Dedicated VA Services</h3>
+        <p>Trained VA support for any marketplace — customer support, inventory, product hunting, listing optimisation and admin.</p>
+        <a class="card-link" href="services.html#va">VA options →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why Sellers Choose Me</span>
+      <h2>An operator's edge, not an agency pitch</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal"><h3>Skin in the game</h3><p>I manage my own capital in the same marketplaces. When Amazon changes fees or TikTok changes policy, I feel it before your account does.</p></div>
+      <div class="card reveal"><h3>Evidence before advice</h3><p>Every recommendation comes from real report data — search terms, targeting, advertised product reports — not gut feeling.</p></div>
+      <div class="card reveal"><h3>I build my own tools</h3><p>Custom automation and public tools like the OnBuy Profit Calculator (live on the Chrome Web Store). Your account benefits from the same software.</p></div>
+      <div class="card reveal"><h3>Direct line, no handoffs</h3><p>You talk to the person doing the work. No account managers relaying messages, no junior staff learning on your account.</p></div>
+      <div class="card reveal"><h3>Honest feasibility</h3><p>If a product, niche or plan won't work, I'll tell you before you spend — with the data that says why.</p></div>
+      <div class="card reveal"><h3>Step-by-step transparency</h3><p>Structured process with confirmation at every stage. You always know what's being done and why.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How It Works</span>
+      <h2>From audit to growth in four steps</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h3>Free Audit</h3><p>Send your account or goals. I review real data and identify the biggest leaks and opportunities.</p></div>
+      <div class="step reveal"><h3>Action Plan</h3><p>A prioritised roadmap with expected impact — what to fix first, what to scale, what to drop.</p></div>
+      <div class="step reveal"><h3>Execution</h3><p>I implement with you or for you: listings, PPC, sourcing, automation — confirmed at each stage.</p></div>
+      <div class="step reveal"><h3>Review &amp; Scale</h3><p>Regular report-based reviews. We double down on what works and cut what doesn't.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULT SNAPSHOT -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="quote reveal">
+      <p>"On a single Amazon Australia account, restructuring the PPC campaigns — fixing self-cannibalisation, adding negatives and harvesting winning search terms — brought ACOS down from ~88% to ~69% while conversion rate rose from 4.8% to 6.4%."</p>
+      <div class="who">CASE: AMAZON AU · SPONSORED PRODUCTS AUDIT · <a href="results.html" style="color:var(--amber)">Read the full breakdown →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Portfolio</span>
+      <h2>Recent work across marketplaces</h2>
+      <p class="lead">A snapshot of real projects — audits, research, listings and software — from my own accounts and client work.</p>
+    </div>
+    <div class="pf-grid">
+      <div class="pf-item reveal">
+        <div class="pf-cover pf-c1">Amazon AU · PPC</div>
+        <div class="pf-body">
+          <h3>Sponsored Products Full Audit</h3>
+          <p>Campaign restructure, negatives, search-term harvesting for a home &amp; kitchen brand.</p>
+          <span class="pf-metric">ACOS 88% → 69% · CVR +33%</span>
+        </div>
+      </div>
+      <div class="pf-item reveal">
+        <div class="pf-cover pf-c2">OnBuy · Software</div>
+        <div class="pf-body">
+          <h3>OnBuy Profit Calculator</h3>
+          <p>Published Chrome extension calculating true OnBuy fees &amp; margins on-page.</p>
+          <span class="pf-metric">LIVE · Chrome Web Store v3.6</span>
+        </div>
+      </div>
+      <div class="pf-item reveal">
+        <div class="pf-cover pf-c3">Amazon AU · Research</div>
+        <div class="pf-body">
+          <h3>Private Label Opportunity Workbook</h3>
+          <p>12 vetted product opportunities with profitability formulas, sourcing &amp; validation checklists.</p>
+          <span class="pf-metric">12 PRODUCTS · MULTI-TAB ANALYSIS</span>
+        </div>
+      </div>
+      <div class="pf-item reveal">
+        <div class="pf-cover pf-c4">eBay UK · Listing SEO</div>
+        <div class="pf-body">
+          <h3>Fitness Product Listing Rebuild</h3>
+          <p>SEO title rewrites and structured, benefit-led description for an underperforming listing.</p>
+          <span class="pf-metric">FULL SEO REWRITE</span>
+        </div>
+      </div>
+      <div class="pf-item reveal">
+        <div class="pf-cover pf-c5">Multi-Marketplace · Automation</div>
+        <div class="pf-body">
+          <h3>Marketplace Research Engine</h3>
+          <p>Custom product research platform — trend detection, health scoring, AI recommendations.</p>
+          <span class="pf-metric">FASTAPI · POSTGRESQL · NEXT.JS</span>
+        </div>
+      </div>
+      <div class="pf-item reveal">
+        <div class="pf-cover pf-c6">Content · Automation</div>
+        <div class="pf-body">
+          <h3>Social Content Pipeline</h3>
+          <p>Automated content workflow for the "Ecommerce With Ikram" brand using AI + scheduling tools.</p>
+          <span class="pf-metric">AI-POWERED · MULTI-PLATFORM</span>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:34px">
+      <a class="btn btn-ghost" href="results.html">See detailed case studies →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding-top:0;margin-top:76px">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Common Questions</span>
+      <h2>Before you ask</h2>
+    </div>
+    <details><summary>Do you work with new sellers or only established accounts?</summary><p>Both. New sellers get setup, product research and launch support. Established sellers usually start with an audit of PPC, listings or account health.</p></details>
+    <details><summary>Which marketplaces and regions do you cover?</summary><p>Amazon (UK, USA, Australia), eBay (all regions), TikTok Shop (UK, USA), OnBuy (UK), plus Etsy, Shopify and Walmart Marketplace setup and management.</p></details>
+    <details><summary>How do you price your services?</summary><p>Per-project or monthly, agreed upfront after the free audit. No surprise fees, no long lock-in contracts.</p></details>
+    <details><summary>What do you need from me to start?</summary><p>For audits: your marketplace reports (e.g. Search Term, Targeting and Advertised Product reports for Amazon PPC). For new projects: your goals, budget and constraints. I'll guide you step by step.</p></details>
+  </div>
+</section>
+
+<!-- CONTACT US -->
+<section id="contact" style="padding-top:0">
+  <div class="container">
+    <div class="home-contact reveal">
+      <div>
+        <span class="eyebrow" style="color:#7FE0B0">Contact Us</span>
+        <h2>Tell me about your store</h2>
+        <p style="margin-top:14px">Fill this quick form and I'll come back with an honest first read on your situation — usually within 24 hours. Prefer chat? Use the WhatsApp button any time.</p>
+        <div style="margin-top:26px;font-family:var(--mono);font-size:.85rem;line-height:2">
+          <div>✉ hello@ecommercewithikram.com</div>
+          <div>◷ Response time: within 24h</div>
+          <div>⚑ Serving UK · USA · Australia</div>
+        </div>
+      </div>
+      <form id="contact-form">
+        <div class="field">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="marketplace">Marketplace</label>
+          <select id="marketplace" name="marketplace" required>
+            <option value="">Select...</option>
+            <option>Amazon UK / USA / AU</option>
+            <option>TikTok Shop</option>
+            <option>eBay</option>
+            <option>OnBuy</option>
+            <option>Other / Not sure</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="service">Service needed</label>
+          <select id="service" name="service" required>
+            <option value="">Select...</option>
+            <option>Free Account Audit</option>
+            <option>PPC Management</option>
+            <option>Product Hunting / Research</option>
+            <option>Listing / SEO</option>
+            <option>Store Management</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Current situation, main problem, goals..."></textarea>
+        </div>
+        <input type="hidden" name="whatsapp" value="">
+        <button class="btn btn-amber" type="submit" style="border:none;cursor:pointer;width:100%">Send Message</button>
+        <p id="form-ok" style="display:none;margin-top:12px;color:#7FE0B0;font-weight:600">Your email app should open with the message ready — just press send.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div>
+        <h2>Get a free, honest audit of your account</h2>
+        <p>Send your store or reports and get back a prioritised list of what's leaking money and what to do about it — whether or not you hire me.</p>
+      </div>
+      <a class="btn btn-amber" href="contact.html">Request Free Audit</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="logo" href="index.html" style="color:#fff"><span class="dot"></span>Ecommerce With Ikram</a>
+        <p>Marketplace growth services from a working seller — Amazon, eBay, TikTok Shop and OnBuy across UK, USA and Australia.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#amazon">Amazon Services</a></li>
+          <li><a href="services.html#tiktok">TikTok Shop</a></li>
+          <li><a href="services.html#ebay">eBay</a></li>
+          <li><a href="services.html#onbuy">OnBuy</a></li>
+          <li><a href="services.html#va">Virtual Assistant</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Ikram</a></li>
+          <li><a href="results.html">Results &amp; Case Studies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get Started</h4>
+        <ul>
+          <li><a href="contact.html">Free Account Audit</a></li>
+          <li><a href="https://wa.me/440000000000">WhatsApp</a></li>
+          <li><a href="mailto:hello@ecommercewithikram.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Ecommerce With Ikram. All rights reserved.</span>
+      <span class="mono">UK · USA · AU</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/440000000000" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-2.9-1.3 11.4 11.4 0 0 1-3.4-3.7c-.6-1-.9-2-.9-2.6 0-.7.3-1.3.7-1.7.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.1.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.5.1.6-.1l.7-.8c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.4 0 .1 0 .5-.3.7Z"/></svg>
+</a>
+
+<script>
+// Ecommerce With Ikram — shared scripts
+document.addEventListener('DOMContentLoaded', () => {
+  // Mobile nav
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('nav ul');
+  if (burger && menu) {
+    burger.addEventListener('click', () => {
+      menu.classList.toggle('open');
+      burger.setAttribute('aria-expanded', menu.classList.contains('open'));
+    });
+  }
+
+  // Scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Contact form → opens email client with prefilled message (no backend needed)
+  const form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      const d = Object.fromEntries(new FormData(form).entries());
+      const body = encodeURIComponent(
+        `Name: ${d.name}\nEmail: ${d.email}\nWhatsApp: ${d.whatsapp || '-'}\nMarketplace: ${d.marketplace}\nService: ${d.service}\n\nMessage:\n${d.message}`
+      );
+      window.location.href = `mailto:hello@ecommercewithikram.com?subject=${encodeURIComponent('New enquiry — ' + d.service)}&body=${body}`;
+      const ok = document.getElementById('form-ok');
+      if (ok) ok.style.display = 'block';
+    });
+  }
+});
+
+</script>
+</body>
+</html>
