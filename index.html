@@ -115,7 +115,7 @@ section{padding:76px 0}
 .stats{background:var(--amber);padding:44px 0}
 .stats .n{color:var(--ink) !important}
 .stats .l{color:#5E4A1E !important;font-weight:600}
-.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
 .stat .n{font-family:var(--mono);font-size:2rem;font-weight:700;color:var(--petrol)}
 .stat .l{font-size:.85rem;color:var(--muted);margin-top:4px}
 
@@ -235,6 +235,9 @@ footer a:hover{color:var(--amber)}
 .pf-mkt{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--petrol);font-weight:700}
 .pf-badge{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;background:var(--petrol);color:#fff;padding:3px 8px;border-radius:5px}
 
+/* ---------- Portfolio screenshots ---------- */
+.pf-shot{width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--line)}
+
 </style>
 <script type="application/ld+json">
 {
@@ -318,8 +321,8 @@ footer a:hover{color:var(--amber)}
   </div>
   <div class="container chips">
     <span class="chip"><b>Amazon</b> Wholesale · Private Label · White Label</span>
-    <span class="chip"><b>eBay</b> Dropshipping · Listings</span>
-    <span class="chip"><b>TikTok Shop</b> UK · USA</span>
+    <span class="chip"><b>eBay</b> Dropshipping</span>
+    <span class="chip"><b>TikTok Shop</b></span>
     <span class="chip"><b>OnBuy</b> UK</span>
     <span class="chip"><b>Etsy · Shopify · Walmart</b></span>
   </div>
@@ -329,9 +332,8 @@ footer a:hover{color:var(--amber)}
 <div class="stats">
   <div class="container stats-grid">
     <div class="stat reveal"><div class="n">5+</div><div class="l">Years selling — since 2021</div></div>
-    <div class="stat reveal"><div class="n">4</div><div class="l">Marketplaces run live</div></div>
     <div class="stat reveal"><div class="n">3</div><div class="l">Regions — UK, USA, AU</div></div>
-    <div class="stat reveal"><div class="n">2</div><div class="l">Own tools shipped publicly</div></div>
+    <div class="stat reveal"><div class="n">20+</div><div class="l">Clients served</div></div>
   </div>
 </div>
 
@@ -404,15 +406,7 @@ footer a:hover{color:var(--amber)}
 
 
 
-<!-- RESULT SNAPSHOT -->
-<section style="padding-top:0">
-  <div class="container">
-    <div class="quote reveal">
-      <p>"On a single Amazon Australia account, restructuring the PPC campaigns — fixing self-cannibalisation, adding negatives and harvesting winning search terms — brought ACOS down from ~88% to ~69% while conversion rate rose from 4.8% to 6.4%."</p>
-      <div class="who">CASE: AMAZON AU · SPONSORED PRODUCTS AUDIT</div>
-    </div>
-  </div>
-</section>
+
 
 <!-- PORTFOLIO -->
 <section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
@@ -427,13 +421,14 @@ footer a:hover{color:var(--amber)}
       <div class="pf-item reveal">
         <div class="pf-graph">
           <div class="pf-graph-head"><span class="pf-mkt">AMAZON · UK / USA / AU</span><span class="pf-badge">SALES</span></div>
-          <svg viewBox="0 0 420 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Amazon sales trend rising">
+          <img class="pf-shot" src="amazon-sales.png" alt="Amazon sales report screenshot" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.pf-fallback').style.display='block'">
+          <div class="pf-fallback" style="display:none"><svg viewBox="0 0 420 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Amazon sales trend rising">
             <g stroke="#E8EDEB" stroke-width="1"><line x1="0" y1="35" x2="420" y2="35"/><line x1="0" y1="70" x2="420" y2="70"/><line x1="0" y1="105" x2="420" y2="105"/></g>
             <path d="M10,125 L70,112 L130,118 L190,95 L250,80 L310,58 L370,42 L410,30 L410,140 L10,140 Z" fill="rgba(14,58,64,.10)"/>
             <path d="M10,125 L70,112 L130,118 L190,95 L250,80 L310,58 L370,42 L410,30" fill="none" stroke="#0E3A40" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             <circle cx="410" cy="30" r="5" fill="#0E3A40"/>
             <g fill="#8AA19B" font-family="IBM Plex Mono, monospace" font-size="10"><text x="10" y="148">JAN</text><text x="195" y="148">MAR</text><text x="385" y="148">JUN</text></g>
-          </svg>
+          </svg></div>
         </div>
         <div class="pf-body">
           <h3>Amazon — Wholesale &amp; Private Label</h3>
@@ -444,11 +439,12 @@ footer a:hover{color:var(--amber)}
       <div class="pf-item reveal">
         <div class="pf-graph">
           <div class="pf-graph-head"><span class="pf-mkt">TIKTOK SHOP · UK / USA</span><span class="pf-badge">SALES</span></div>
-          <svg viewBox="0 0 420 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TikTok Shop sales trend rising">
+          <img class="pf-shot" src="tiktok-sales.png" alt="TikTok Shop sales report screenshot" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.pf-fallback').style.display='block'">
+          <div class="pf-fallback" style="display:none"><svg viewBox="0 0 420 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TikTok Shop sales trend rising">
             <g stroke="#E8EDEB" stroke-width="1"><line x1="0" y1="35" x2="420" y2="35"/><line x1="0" y1="70" x2="420" y2="70"/><line x1="0" y1="105" x2="420" y2="105"/></g>
             <g fill="#C84A6B"><rect x="20" y="112" width="34" height="28" rx="4"/><rect x="72" y="100" width="34" height="40" rx="4"/><rect x="124" y="106" width="34" height="34" rx="4"/><rect x="176" y="84" width="34" height="56" rx="4"/><rect x="228" y="66" width="34" height="74" rx="4"/><rect x="280" y="72" width="34" height="68" rx="4"/><rect x="332" y="46" width="34" height="94" rx="4"/><rect x="384" y="28" width="26" height="112" rx="4"/></g>
             <g fill="#8AA19B" font-family="IBM Plex Mono, monospace" font-size="10"><text x="20" y="148">W1</text><text x="210" y="148">W4</text><text x="384" y="148">W8</text></g>
-          </svg>
+          </svg></div>
         </div>
         <div class="pf-body">
           <h3>TikTok Shop — White Label</h3>
@@ -459,13 +455,14 @@ footer a:hover{color:var(--amber)}
       <div class="pf-item reveal">
         <div class="pf-graph">
           <div class="pf-graph-head"><span class="pf-mkt">ONBUY · UK</span><span class="pf-badge">SALES</span></div>
-          <svg viewBox="0 0 420 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="OnBuy sales trend rising">
+          <img class="pf-shot" src="onbuy-sales.png" alt="OnBuy sales report screenshot" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.pf-fallback').style.display='block'">
+          <div class="pf-fallback" style="display:none"><svg viewBox="0 0 420 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="OnBuy sales trend rising">
             <g stroke="#E8EDEB" stroke-width="1"><line x1="0" y1="35" x2="420" y2="35"/><line x1="0" y1="70" x2="420" y2="70"/><line x1="0" y1="105" x2="420" y2="105"/></g>
             <path d="M10,128 L70,120 L130,108 L190,110 L250,88 L310,75 L370,52 L410,38 L410,140 L10,140 Z" fill="rgba(30,122,90,.12)"/>
             <path d="M10,128 L70,120 L130,108 L190,110 L250,88 L310,75 L370,52 L410,38" fill="none" stroke="#1E7A5A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             <circle cx="410" cy="38" r="5" fill="#1E7A5A"/>
             <g fill="#8AA19B" font-family="IBM Plex Mono, monospace" font-size="10"><text x="10" y="148">JAN</text><text x="195" y="148">MAR</text><text x="385" y="148">JUN</text></g>
-          </svg>
+          </svg></div>
         </div>
         <div class="pf-body">
           <h3>OnBuy — Marketplace Sales</h3>
@@ -476,13 +473,14 @@ footer a:hover{color:var(--amber)}
       <div class="pf-item reveal">
         <div class="pf-graph">
           <div class="pf-graph-head"><span class="pf-mkt">EBAY · UK / USA / AU</span><span class="pf-badge">SALES</span></div>
-          <svg viewBox="0 0 420 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="eBay sales trend rising">
+          <img class="pf-shot" src="ebay-sales.png" alt="eBay sales report screenshot" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.pf-fallback').style.display='block'">
+          <div class="pf-fallback" style="display:none"><svg viewBox="0 0 420 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="eBay sales trend rising">
             <g stroke="#E8EDEB" stroke-width="1"><line x1="0" y1="35" x2="420" y2="35"/><line x1="0" y1="70" x2="420" y2="70"/><line x1="0" y1="105" x2="420" y2="105"/></g>
             <path d="M10,118 L70,124 L130,104 L190,98 L250,102 L310,70 L370,60 L410,44 L410,140 L10,140 Z" fill="rgba(232,163,61,.14)"/>
             <path d="M10,118 L70,124 L130,104 L190,98 L250,102 L310,70 L370,60 L410,44" fill="none" stroke="#E8A33D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
             <circle cx="410" cy="44" r="5" fill="#E8A33D"/>
             <g fill="#8AA19B" font-family="IBM Plex Mono, monospace" font-size="10"><text x="10" y="148">JAN</text><text x="195" y="148">MAR</text><text x="385" y="148">JUN</text></g>
-          </svg>
+          </svg></div>
         </div>
         <div class="pf-body">
           <h3>eBay — Dropshipping</h3>
