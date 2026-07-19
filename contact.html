@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact & Free Audit | Ecommerce With Ikram</title>
+<title>Contact Us | Ecommerce With Ikram</title>
 <meta name="description" content="Request a free ecommerce account audit or contact Ikram directly for Amazon, eBay, TikTok Shop and OnBuy services. WhatsApp and email — direct line to the operator.">
 <link rel="canonical" href="https://ecommercewithikram.com/contact.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -248,99 +248,107 @@ footer a:hover{color:var(--amber)}
   <div class="container">
     <div class="crumb"><a href="index.html">Home</a> / Contact</div>
     <span class="eyebrow">Direct Line To The Operator</span>
-    <h1>Let's look at your numbers</h1>
-    <p class="lead">Fill the form for a free audit, or message me directly on WhatsApp. You'll hear back from me — not an assistant — usually within 24 hours.</p>
+    <h1>Contact Us</h1>
+    <p class="lead">Choose how you want to reach out — chat instantly on WhatsApp, or send a message with your details. You'll hear back from me directly, usually within 24 hours.</p>
   </div>
 </div>
 
 <section>
-  <div class="container">
-    <div class="grid-2" style="align-items:start;gap:40px">
+  <div class="container" style="max-width:820px">
 
-      <!-- FORM -->
+    <!-- TABS -->
+    <div class="ct-tabs" role="tablist">
+      <button class="ct-tab active" id="tab-wa-btn" role="tab" aria-selected="true" onclick="ctShow('wa')">💬 WhatsApp</button>
+      <button class="ct-tab" id="tab-form-btn" role="tab" aria-selected="false" onclick="ctShow('form')">✉ Email</button>
+    </div>
+
+    <!-- WHATSAPP PANEL -->
+    <div id="panel-wa" class="ct-panel active">
+      <div class="wa-pop reveal in">
+        <div class="wa-pop-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="44" height="44"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-2.9-1.3 11.4 11.4 0 0 1-3.4-3.7c-.6-1-.9-2-.9-2.6 0-.7.3-1.3.7-1.7.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.1.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.5.1.6-.1l.7-.8c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.4 0 .1 0 .5-.3.7Z"/></svg>
+        </div>
+        <h2>Chat on WhatsApp</h2>
+        <p>The fastest way to reach me — quick questions, voice notes and screenshots of your Seller Central are all welcome. Tap the button and a WhatsApp chat opens directly.</p>
+        <a class="wa-pop-btn" href="https://wa.me/923224429312?text=Hi%20Ikram%2C%20I%20would%20like%20to%20talk%20about%20your%20ecommerce%20services." target="_blank" rel="noopener">
+          Open WhatsApp Chat
+        </a>
+        <p class="wa-pop-note">Response time: usually within 24 hours · UK · USA · Australia</p>
+      </div>
+    </div>
+
+    <!-- FORM PANEL -->
+    <div id="panel-form" class="ct-panel">
       <div class="card" style="padding:34px 30px">
-        <h3 style="margin-bottom:6px">Request a Free Audit</h3>
-        <p style="color:var(--muted);font-size:.92rem;margin-bottom:24px">The more detail you give, the sharper the audit.</p>
-        <form id="contact-form">
+        <h3 style="margin-bottom:6px">Send an Email</h3>
+        <p style="color:var(--muted);font-size:.92rem;margin-bottom:24px">Share your details and your question — your message will be sent to me by email.</p>
+        <form id="contact-form-email">
           <div class="field">
-            <label for="name">Your name</label>
-            <input id="name" name="name" type="text" required autocomplete="name">
+            <label for="cname">Your name</label>
+            <input id="cname" name="cname" type="text" required autocomplete="name" placeholder="Your full name">
           </div>
           <div class="field">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required autocomplete="email">
+            <label for="cemail">Your email</label>
+            <input id="cemail" name="cemail" type="email" required autocomplete="email" placeholder="you@example.com">
           </div>
           <div class="field">
-            <label for="whatsapp">WhatsApp number (optional)</label>
-            <input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" placeholder="+44 ...">
+            <label for="cphone">Phone number</label>
+            <input id="cphone" name="cphone" type="tel" required autocomplete="tel" placeholder="+44 / +1 / +61 ...">
           </div>
           <div class="field">
-            <label for="marketplace">Which marketplace?</label>
-            <select id="marketplace" name="marketplace" required>
-              <option value="">Select...</option>
-              <option>Amazon UK</option>
-              <option>Amazon USA</option>
-              <option>Amazon Australia</option>
-              <option>TikTok Shop UK</option>
-              <option>TikTok Shop USA</option>
-              <option>eBay</option>
-              <option>OnBuy</option>
-              <option>Etsy / Shopify / Walmart</option>
-              <option>Multiple / Not sure</option>
-            </select>
+            <label for="cmsg">What would you like to ask?</label>
+            <textarea id="cmsg" name="cmsg" required placeholder="Write your question or requirement here..."></textarea>
           </div>
-          <div class="field">
-            <label for="service">What do you need?</label>
-            <select id="service" name="service" required>
-              <option value="">Select...</option>
-              <option>Free Account Audit</option>
-              <option>PPC Management / Audit</option>
-              <option>Product Hunting / Research</option>
-              <option>Listing Creation / SEO</option>
-              <option>Store Setup</option>
-              <option>Full Store Management</option>
-              <option>Virtual Assistant</option>
-              <option>Account Reinstatement / Appeal</option>
-              <option>Something else</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="message">Tell me about your situation</label>
-            <textarea id="message" name="message" required placeholder="Current sales, main problem, goals..."></textarea>
-          </div>
-          <button class="btn btn-primary" type="submit" style="border:none;cursor:pointer;width:100%">Send Enquiry</button>
-          <p id="form-ok" style="display:none;margin-top:14px;color:var(--green);font-weight:600">Your email app should open with the message ready — just press send.</p>
+          <button class="btn btn-primary" type="submit" style="border:none;cursor:pointer;width:100%">Send Email</button>
+          <p id="email-ok" style="display:none;margin-top:12px;color:var(--green);font-weight:600;text-align:center">Your email app should open with the message ready — just press send.</p>
         </form>
       </div>
-
-      <!-- DIRECT -->
-      <div>
-        <div class="card reveal" style="margin-bottom:20px">
-          <span class="tag">Fastest</span>
-          <h3>WhatsApp</h3>
-          <p>Quick questions, voice notes, screenshots of your Seller Central — all welcome.</p>
-          <a class="btn btn-primary" style="margin-top:16px" href="https://wa.me/440000000000">Message on WhatsApp</a>
-        </div>
-        <div class="card reveal" style="margin-bottom:20px">
-          <span class="tag">Detailed</span>
-          <h3>Email</h3>
-          <p>Best for sending reports, spreadsheets and longer briefs.</p>
-          <a class="btn btn-ghost" style="margin-top:16px" href="mailto:hello@ecommercewithikram.com">hello@ecommercewithikram.com</a>
-        </div>
-        <div class="card reveal">
-          <span class="tag">What To Prepare</span>
-          <h3>For the sharpest audit, send:</h3>
-          <ul>
-            <li>Amazon PPC: Search Term, Targeting &amp; Advertised Product reports (60 days)</li>
-            <li>Listings: your store or ASIN links</li>
-            <li>New sellers: budget, target marketplace &amp; goals</li>
-          </ul>
-        </div>
-      </div>
-
     </div>
+
   </div>
 </section>
+
+<style>
+.ct-tabs{display:flex;gap:10px;margin-bottom:26px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:6px}
+.ct-tab{flex:1;border:none;background:transparent;font-family:var(--display);font-weight:700;font-size:1rem;padding:14px;border-radius:9px;cursor:pointer;color:var(--muted);transition:.15s}
+.ct-tab.active{background:var(--petrol);color:#fff}
+.ct-panel{display:none}
+.ct-panel.active{display:block}
+.wa-pop{background:linear-gradient(135deg,#0B2E33,#155A5E);border-radius:var(--radius);padding:48px 40px;text-align:center;color:#EAF4F1}
+.wa-pop h2{color:#fff;margin-top:18px}
+.wa-pop p{color:#B9D2CB;max-width:480px;margin:14px auto 0}
+.wa-pop-icon{width:84px;height:84px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto;box-shadow:0 12px 30px -8px rgba(37,211,102,.55)}
+.wa-pop-btn{display:inline-block;margin-top:26px;background:#25D366;color:#fff;font-weight:700;font-size:1.05rem;padding:16px 38px;border-radius:12px;text-decoration:none;transition:.18s}
+.wa-pop-btn:hover{transform:translateY(-2px);filter:brightness(1.07)}
+.wa-pop-note{font-family:var(--mono);font-size:.78rem !important;color:#8FB0A8 !important;margin-top:20px !important}
+@media(max-width:640px){.wa-pop{padding:36px 22px}}
+</style>
+<script>
+function ctShow(which){
+  document.getElementById('panel-wa').classList.toggle('active', which==='wa');
+  document.getElementById('panel-form').classList.toggle('active', which==='form');
+  document.getElementById('tab-wa-btn').classList.toggle('active', which==='wa');
+  document.getElementById('tab-form-btn').classList.toggle('active', which==='form');
+  document.getElementById('tab-wa-btn').setAttribute('aria-selected', which==='wa');
+  document.getElementById('tab-form-btn').setAttribute('aria-selected', which==='form');
+}
+document.addEventListener('DOMContentLoaded', function(){
+  var f = document.getElementById('contact-form-email');
+  if(f){
+    f.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var n = document.getElementById('cname').value;
+      var e = document.getElementById('cemail').value;
+      var p = document.getElementById('cphone').value;
+      var m = document.getElementById('cmsg').value;
+      var body = encodeURIComponent('Name: '+n+'\nEmail: '+e+'\nPhone: '+p+'\n\n'+m);
+      window.location.href = 'mailto:ikramsahir29@gmail.com?subject='+encodeURIComponent('Website enquiry from '+n)+'&body='+body;
+      var ok = document.getElementById('email-ok');
+      if(ok) ok.style.display='block';
+    });
+  }
+});
+</script>
 
 <footer>
   <div class="container">
@@ -371,8 +379,8 @@ footer a:hover{color:var(--amber)}
         <h4>Get Started</h4>
         <ul>
           <li><a href="contact.html">Free Account Audit</a></li>
-          <li><a href="https://wa.me/440000000000">WhatsApp</a></li>
-          <li><a href="mailto:hello@ecommercewithikram.com">Email</a></li>
+          <li><a href="https://wa.me/923224429312">WhatsApp</a></li>
+          <li><a href="mailto:ikramsahir29@gmail.com">Email</a></li>
         </ul>
       </div>
     </div>
@@ -383,7 +391,7 @@ footer a:hover{color:var(--amber)}
   </div>
 </footer>
 
-<a class="wa" href="https://wa.me/440000000000" aria-label="Chat on WhatsApp">
+<a class="wa" href="https://wa.me/923224429312" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-2.9-1.3 11.4 11.4 0 0 1-3.4-3.7c-.6-1-.9-2-.9-2.6 0-.7.3-1.3.7-1.7.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.1.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.5.1.6-.1l.7-.8c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.4 0 .1 0 .5-.3.7Z"/></svg>
 </a>
 
@@ -415,7 +423,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const body = encodeURIComponent(
         `Name: ${d.name}\nEmail: ${d.email}\nWhatsApp: ${d.whatsapp || '-'}\nMarketplace: ${d.marketplace}\nService: ${d.service}\n\nMessage:\n${d.message}`
       );
-      window.location.href = `mailto:hello@ecommercewithikram.com?subject=${encodeURIComponent('New enquiry — ' + d.service)}&body=${body}`;
+      window.location.href = `mailto:ikramsahir29@gmail.com?subject=${encodeURIComponent('New enquiry — ' + d.service)}&body=${body}`;
       const ok = document.getElementById('form-ok');
       if (ok) ok.style.display = 'block';
     });

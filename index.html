@@ -266,18 +266,47 @@ footer a:hover{color:var(--amber)}
       <h1>Your marketplace growth, managed by someone who <em>actually sells</em>.</h1>
       <p class="lead">Most agencies manage accounts they've never run. I sell every day on Amazon UK, USA &amp; Australia, eBay, TikTok Shop and OnBuy — and I bring the same playbooks, tools and honesty to your business.</p>
       <div class="hero-ctas">
-        <a class="btn btn-amber" href="contact.html">Get a Free Account Audit</a>
+        <a class="btn btn-amber" href="contact.html">Contact Us</a>
         <a class="btn btn-ghost" href="services.html">Explore Services</a>
       </div>
       <p class="hero-note">No lock-in contracts · Direct communication · Evidence before advice</p>
     </div>
-    <div class="ledger reveal" aria-label="Recent live results from managed accounts">
-      <div class="ledger-row"><span class="k">amazon_au.ppc.acos</span><span class="v up">88% → 69%</span></div>
-      <div class="ledger-row"><span class="k">amazon_au.cvr</span><span class="v up">4.8% → 6.4%</span></div>
-      <div class="ledger-row"><span class="k">marketplaces.live</span><span class="v">AMZ · EBAY · ONBUY · TIKTOK</span></div>
-      <div class="ledger-row"><span class="k">regions</span><span class="v">UK · USA · AU</span></div>
-      <div class="ledger-row"><span class="k">operating_since</span><span class="v amber">2021</span></div>
-      <div class="ledger-row"><span class="k">tools.shipped</span><span class="v">OnBuy Profit Calculator v3.6</span></div>
+    <div class="ledger reveal" aria-label="Account performance graph">
+      <svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ACOS decreasing from 88% to 69% and conversion rate rising from 4.8% to 6.4% over six periods">
+        <!-- grid -->
+        <g stroke="rgba(220,234,230,.14)" stroke-width="1">
+          <line x1="50" y1="40" x2="440" y2="40"/><line x1="50" y1="90" x2="440" y2="90"/>
+          <line x1="50" y1="140" x2="440" y2="140"/><line x1="50" y1="190" x2="440" y2="190"/>
+          <line x1="50" y1="240" x2="440" y2="240"/>
+        </g>
+        <!-- y labels -->
+        <g fill="#9DBBB4" font-family="IBM Plex Mono, monospace" font-size="11">
+          <text x="12" y="44">90%</text><text x="12" y="94">80%</text>
+          <text x="12" y="144">75%</text><text x="12" y="194">70%</text><text x="12" y="244">65%</text>
+        </g>
+        <!-- x labels -->
+        <g fill="#9DBBB4" font-family="IBM Plex Mono, monospace" font-size="11">
+          <text x="55" y="266">W1</text><text x="130" y="266">W2</text><text x="205" y="266">W3</text>
+          <text x="280" y="266">W4</text><text x="355" y="266">W5</text><text x="422" y="266">W6</text>
+        </g>
+        <!-- ACOS area -->
+        <path d="M60,50 L135,72 L210,120 L285,150 L360,185 L430,212 L430,240 L60,240 Z" fill="rgba(232,163,61,.14)"/>
+        <!-- ACOS line -->
+        <path d="M60,50 L135,72 L210,120 L285,150 L360,185 L430,212" fill="none" stroke="#E8A33D" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <g fill="#E8A33D"><circle cx="60" cy="50" r="5"/><circle cx="430" cy="212" r="5"/></g>
+        <!-- CVR line -->
+        <path d="M60,205 L135,200 L210,188 L285,172 L360,158 L430,148" fill="none" stroke="#7FE0B0" stroke-width="3" stroke-dasharray="1 0" stroke-linecap="round"/>
+        <g fill="#7FE0B0"><circle cx="60" cy="205" r="4.5"/><circle cx="430" cy="148" r="4.5"/></g>
+        <!-- endpoint labels -->
+        <g font-family="IBM Plex Mono, monospace" font-size="13" font-weight="700">
+          <text x="60" y="34" fill="#E8A33D">ACOS 88%</text>
+          <text x="342" y="200" fill="#E8A33D">69%</text>
+          <text x="60" y="228" fill="#7FE0B0">CVR 4.8%</text>
+          <text x="352" y="138" fill="#7FE0B0">6.4%</text>
+        </g>
+      </svg>
+      <div class="ledger-row" style="margin-top:10px"><span class="k">amazon_au · sponsored_products</span><span class="v up">6-week restructure</span></div>
+    </div>
     </div>
   </div>
   <div class="container chips">
@@ -302,33 +331,16 @@ footer a:hover{color:var(--amber)}
 <!-- COMPANY OVERVIEW -->
 <section id="overview">
   <div class="container">
-    <div class="grid-2" style="align-items:center;gap:46px">
+    <div style="max-width:760px">
       <div>
         <span class="eyebrow">Company Overview</span>
         <h2>Selling since 2021. Still selling today.</h2>
-        <p style="margin-top:18px;color:var(--muted)">Ecommerce With Ikram ki bunyad 2021 mein rakhi gayi — we have been doing ecommerce since 2021, starting with a single Amazon account and growing into a multi-marketplace operation run with discipline, data and our own software.</p>
+        <p style="margin-top:18px;color:var(--muted)">We have been doing ecommerce since 2021, starting with a single Amazon account and growing into a multi-marketplace operation run with discipline, data and our own software.</p>
         <p style="margin-top:14px;color:var(--muted)">Today we operate across <strong style="color:var(--ink)">Amazon (UK, USA &amp; Australia)</strong> in wholesale brand reselling and private label, <strong style="color:var(--ink)">eBay dropshipping</strong> in USA, UK and Australia, <strong style="color:var(--ink)">OnBuy UK</strong>, and <strong style="color:var(--ink)">TikTok Shop (UK &amp; USA)</strong> on a white-label model.</p>
         <p style="margin-top:14px;color:var(--muted)">Alongside our own stores, we provide the same services to clients worldwide — audits, product research, listing SEO, PPC management, store setup and full account management — plus freelancing support for sellers who need an experienced operator on demand.</p>
         <p style="margin-top:14px;color:var(--muted)">What makes us different: we build our own automation tools (including a public Chrome extension for OnBuy sellers), we test everything on our own money first, and we give honest feasibility assessments — even when the honest answer is "don't do this".</p>
       </div>
-      <div>
-        <div class="card reveal" style="margin-bottom:16px">
-          <span class="tag">Established</span>
-          <h3>2021 — Active Ever Since</h3>
-          <p>Five-plus years of continuous, hands-on selling. No gap years, no theory-only phase.</p>
-        </div>
-        <div class="card reveal" style="margin-bottom:16px">
-          <span class="tag">Business Models</span>
-          <h3>Wholesale · Private Label · White Label · Dropshipping</h3>
-          <p>All four models run live in our own accounts across four marketplaces and three regions.</p>
-        </div>
-        <div class="card reveal">
-          <span class="tag">Clients &amp; Freelancing</span>
-          <h3>Services + Freelance Support</h3>
-          <p>Full-service management for stores, plus project-based freelancing for sellers, brands and agencies worldwide.</p>
-        </div>
-      </div>
-    </div>
+          </div>
   </div>
 </section>
 
@@ -381,23 +393,7 @@ footer a:hover{color:var(--amber)}
   </div>
 </section>
 
-<!-- WHY -->
-<section style="background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Why Sellers Choose Me</span>
-      <h2>An operator's edge, not an agency pitch</h2>
-    </div>
-    <div class="grid-3">
-      <div class="card reveal"><h3>Skin in the game</h3><p>I manage my own capital in the same marketplaces. When Amazon changes fees or TikTok changes policy, I feel it before your account does.</p></div>
-      <div class="card reveal"><h3>Evidence before advice</h3><p>Every recommendation comes from real report data — search terms, targeting, advertised product reports — not gut feeling.</p></div>
-      <div class="card reveal"><h3>I build my own tools</h3><p>Custom automation and public tools like the OnBuy Profit Calculator (live on the Chrome Web Store). Your account benefits from the same software.</p></div>
-      <div class="card reveal"><h3>Direct line, no handoffs</h3><p>You talk to the person doing the work. No account managers relaying messages, no junior staff learning on your account.</p></div>
-      <div class="card reveal"><h3>Honest feasibility</h3><p>If a product, niche or plan won't work, I'll tell you before you spend — with the data that says why.</p></div>
-      <div class="card reveal"><h3>Step-by-step transparency</h3><p>Structured process with confirmation at every stage. You always know what's being done and why.</p></div>
-    </div>
-  </div>
-</section>
+
 
 <!-- PROCESS -->
 <section>
@@ -407,7 +403,7 @@ footer a:hover{color:var(--amber)}
       <h2>From audit to growth in four steps</h2>
     </div>
     <div class="steps">
-      <div class="step reveal"><h3>Free Audit</h3><p>Send your account or goals. I review real data and identify the biggest leaks and opportunities.</p></div>
+      <div class="step reveal"><h3>First Contact</h3><p>Send your account details or goals. I review real data and identify the biggest leaks and opportunities.</p></div>
       <div class="step reveal"><h3>Action Plan</h3><p>A prioritised roadmap with expected impact — what to fix first, what to scale, what to drop.</p></div>
       <div class="step reveal"><h3>Execution</h3><p>I implement with you or for you: listings, PPC, sourcing, automation — confirmed at each stage.</p></div>
       <div class="step reveal"><h3>Review &amp; Scale</h3><p>Regular report-based reviews. We double down on what works and cut what doesn't.</p></div>
@@ -512,7 +508,7 @@ footer a:hover{color:var(--amber)}
         <h2>Tell me about your store</h2>
         <p style="margin-top:14px">Fill this quick form and I'll come back with an honest first read on your situation — usually within 24 hours. Prefer chat? Use the WhatsApp button any time.</p>
         <div style="margin-top:26px;font-family:var(--mono);font-size:.85rem;line-height:2">
-          <div>✉ hello@ecommercewithikram.com</div>
+          <div>✉ ikramsahir29@gmail.com</div>
           <div>◷ Response time: within 24h</div>
           <div>⚑ Serving UK · USA · Australia</div>
         </div>
@@ -541,7 +537,7 @@ footer a:hover{color:var(--amber)}
           <label for="service">Service needed</label>
           <select id="service" name="service" required>
             <option value="">Select...</option>
-            <option>Free Account Audit</option>
+            <option>General Inquiry</option>
             <option>PPC Management</option>
             <option>Product Hunting / Research</option>
             <option>Listing / SEO</option>
@@ -566,10 +562,10 @@ footer a:hover{color:var(--amber)}
   <div class="container">
     <div class="cta-band reveal">
       <div>
-        <h2>Get a free, honest audit of your account</h2>
-        <p>Send your store or reports and get back a prioritised list of what's leaking money and what to do about it — whether or not you hire me.</p>
+        <h2>Ready to grow your marketplace business?</h2>
+        <p>Send your store details or goals and get an honest, data-backed starting point — direct from the operator.</p>
       </div>
-      <a class="btn btn-amber" href="contact.html">Request Free Audit</a>
+      <a class="btn btn-amber" href="contact.html">Contact Us</a>
     </div>
   </div>
 </section>
@@ -603,8 +599,8 @@ footer a:hover{color:var(--amber)}
         <h4>Get Started</h4>
         <ul>
           <li><a href="contact.html">Free Account Audit</a></li>
-          <li><a href="https://wa.me/440000000000">WhatsApp</a></li>
-          <li><a href="mailto:hello@ecommercewithikram.com">Email</a></li>
+          <li><a href="https://wa.me/923224429312">WhatsApp</a></li>
+          <li><a href="mailto:ikramsahir29@gmail.com">Email</a></li>
         </ul>
       </div>
     </div>
@@ -615,7 +611,7 @@ footer a:hover{color:var(--amber)}
   </div>
 </footer>
 
-<a class="wa" href="https://wa.me/440000000000" aria-label="Chat on WhatsApp">
+<a class="wa" href="https://wa.me/923224429312" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1a13 13 0 0 1-2.9-1.3 11.4 11.4 0 0 1-3.4-3.7c-.6-1-.9-2-.9-2.6 0-.7.3-1.3.7-1.7.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.3.4-.1.7.1.3.7 1.2 1.5 1.9 1 .9 1.9 1.2 2.2 1.3.3.1.5.1.6-.1l.7-.8c.2-.3.4-.2.7-.1l1.8.9c.3.1.5.2.5.4 0 .1 0 .5-.3.7Z"/></svg>
 </a>
 
@@ -647,7 +643,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const body = encodeURIComponent(
         `Name: ${d.name}\nEmail: ${d.email}\nWhatsApp: ${d.whatsapp || '-'}\nMarketplace: ${d.marketplace}\nService: ${d.service}\n\nMessage:\n${d.message}`
       );
-      window.location.href = `mailto:hello@ecommercewithikram.com?subject=${encodeURIComponent('New enquiry — ' + d.service)}&body=${body}`;
+      window.location.href = `mailto:ikramsahir29@gmail.com?subject=${encodeURIComponent('New enquiry — ' + d.service)}&body=${body}`;
       const ok = document.getElementById('form-ok');
       if (ok) ok.style.display = 'block';
     });
