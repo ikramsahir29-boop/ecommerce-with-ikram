@@ -227,6 +227,14 @@ footer a:hover{color:var(--amber)}
 .home-contact input,.home-contact select,.home-contact textarea{border-color:transparent}
 @media(max-width:920px){.home-contact{grid-template-columns:1fr;padding:32px 24px}}
 
+
+/* ---------- Portfolio graph cards ---------- */
+.pf-graph{background:#FAFBFA;border-bottom:1px solid var(--line);padding:16px 16px 8px}
+.pf-graph svg{width:100%;height:auto;display:block}
+.pf-graph-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.pf-mkt{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--petrol);font-weight:700}
+.pf-badge{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;background:var(--petrol);color:#fff;padding:3px 8px;border-radius:5px}
+
 </style>
 <script type="application/ld+json">
 {
@@ -250,7 +258,6 @@ footer a:hover{color:var(--amber)}
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="results.html">Results</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
       </ul>
@@ -395,28 +402,14 @@ footer a:hover{color:var(--amber)}
 
 
 
-<!-- PROCESS -->
-<section>
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">How It Works</span>
-      <h2>From audit to growth in four steps</h2>
-    </div>
-    <div class="steps">
-      <div class="step reveal"><h3>First Contact</h3><p>Send your account details or goals. I review real data and identify the biggest leaks and opportunities.</p></div>
-      <div class="step reveal"><h3>Action Plan</h3><p>A prioritised roadmap with expected impact — what to fix first, what to scale, what to drop.</p></div>
-      <div class="step reveal"><h3>Execution</h3><p>I implement with you or for you: listings, PPC, sourcing, automation — confirmed at each stage.</p></div>
-      <div class="step reveal"><h3>Review &amp; Scale</h3><p>Regular report-based reviews. We double down on what works and cut what doesn't.</p></div>
-    </div>
-  </div>
-</section>
+
 
 <!-- RESULT SNAPSHOT -->
 <section style="padding-top:0">
   <div class="container">
     <div class="quote reveal">
       <p>"On a single Amazon Australia account, restructuring the PPC campaigns — fixing self-cannibalisation, adding negatives and harvesting winning search terms — brought ACOS down from ~88% to ~69% while conversion rate rose from 4.8% to 6.4%."</p>
-      <div class="who">CASE: AMAZON AU · SPONSORED PRODUCTS AUDIT · <a href="results.html" style="color:var(--amber)">Read the full breakdown →</a></div>
+      <div class="who">CASE: AMAZON AU · SPONSORED PRODUCTS AUDIT</div>
     </div>
   </div>
 </section>
@@ -426,78 +419,83 @@ footer a:hover{color:var(--amber)}
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Portfolio</span>
-      <h2>Recent work across marketplaces</h2>
-      <p class="lead">A snapshot of real projects — audits, research, listings and software — from my own accounts and client work.</p>
+      <h2>Sales performance across marketplaces</h2>
+      <p class="lead">Sample growth curves from our marketplace operations. Detailed account graphs are added as new results are published.</p>
     </div>
-    <div class="pf-grid">
+    <div class="grid-2">
+
       <div class="pf-item reveal">
-        <div class="pf-cover pf-c1">Amazon AU · PPC</div>
+        <div class="pf-graph">
+          <div class="pf-graph-head"><span class="pf-mkt">AMAZON · UK / USA / AU</span><span class="pf-badge">SALES</span></div>
+          <svg viewBox="0 0 420 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Amazon sales trend rising">
+            <g stroke="#E8EDEB" stroke-width="1"><line x1="0" y1="35" x2="420" y2="35"/><line x1="0" y1="70" x2="420" y2="70"/><line x1="0" y1="105" x2="420" y2="105"/></g>
+            <path d="M10,125 L70,112 L130,118 L190,95 L250,80 L310,58 L370,42 L410,30 L410,140 L10,140 Z" fill="rgba(14,58,64,.10)"/>
+            <path d="M10,125 L70,112 L130,118 L190,95 L250,80 L310,58 L370,42 L410,30" fill="none" stroke="#0E3A40" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="410" cy="30" r="5" fill="#0E3A40"/>
+            <g fill="#8AA19B" font-family="IBM Plex Mono, monospace" font-size="10"><text x="10" y="148">JAN</text><text x="195" y="148">MAR</text><text x="385" y="148">JUN</text></g>
+          </svg>
+        </div>
         <div class="pf-body">
-          <h3>Sponsored Products Full Audit</h3>
-          <p>Campaign restructure, negatives, search-term harvesting for a home &amp; kitchen brand.</p>
-          <span class="pf-metric">ACOS 88% → 69% · CVR +33%</span>
+          <h3>Amazon — Wholesale &amp; Private Label</h3>
+          <p>Month-over-month sales growth across three regions.</p>
         </div>
       </div>
+
       <div class="pf-item reveal">
-        <div class="pf-cover pf-c2">OnBuy · Software</div>
+        <div class="pf-graph">
+          <div class="pf-graph-head"><span class="pf-mkt">TIKTOK SHOP · UK / USA</span><span class="pf-badge">SALES</span></div>
+          <svg viewBox="0 0 420 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TikTok Shop sales trend rising">
+            <g stroke="#E8EDEB" stroke-width="1"><line x1="0" y1="35" x2="420" y2="35"/><line x1="0" y1="70" x2="420" y2="70"/><line x1="0" y1="105" x2="420" y2="105"/></g>
+            <g fill="#C84A6B"><rect x="20" y="112" width="34" height="28" rx="4"/><rect x="72" y="100" width="34" height="40" rx="4"/><rect x="124" y="106" width="34" height="34" rx="4"/><rect x="176" y="84" width="34" height="56" rx="4"/><rect x="228" y="66" width="34" height="74" rx="4"/><rect x="280" y="72" width="34" height="68" rx="4"/><rect x="332" y="46" width="34" height="94" rx="4"/><rect x="384" y="28" width="26" height="112" rx="4"/></g>
+            <g fill="#8AA19B" font-family="IBM Plex Mono, monospace" font-size="10"><text x="20" y="148">W1</text><text x="210" y="148">W4</text><text x="384" y="148">W8</text></g>
+          </svg>
+        </div>
         <div class="pf-body">
-          <h3>OnBuy Profit Calculator</h3>
-          <p>Published Chrome extension calculating true OnBuy fees &amp; margins on-page.</p>
-          <span class="pf-metric">LIVE · Chrome Web Store v3.6</span>
+          <h3>TikTok Shop — White Label</h3>
+          <p>Weekly order volume on a white-label catalogue.</p>
         </div>
       </div>
+
       <div class="pf-item reveal">
-        <div class="pf-cover pf-c3">Amazon AU · Research</div>
+        <div class="pf-graph">
+          <div class="pf-graph-head"><span class="pf-mkt">ONBUY · UK</span><span class="pf-badge">SALES</span></div>
+          <svg viewBox="0 0 420 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="OnBuy sales trend rising">
+            <g stroke="#E8EDEB" stroke-width="1"><line x1="0" y1="35" x2="420" y2="35"/><line x1="0" y1="70" x2="420" y2="70"/><line x1="0" y1="105" x2="420" y2="105"/></g>
+            <path d="M10,128 L70,120 L130,108 L190,110 L250,88 L310,75 L370,52 L410,38 L410,140 L10,140 Z" fill="rgba(30,122,90,.12)"/>
+            <path d="M10,128 L70,120 L130,108 L190,110 L250,88 L310,75 L370,52 L410,38" fill="none" stroke="#1E7A5A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="410" cy="38" r="5" fill="#1E7A5A"/>
+            <g fill="#8AA19B" font-family="IBM Plex Mono, monospace" font-size="10"><text x="10" y="148">JAN</text><text x="195" y="148">MAR</text><text x="385" y="148">JUN</text></g>
+          </svg>
+        </div>
         <div class="pf-body">
-          <h3>Private Label Opportunity Workbook</h3>
-          <p>12 vetted product opportunities with profitability formulas, sourcing &amp; validation checklists.</p>
-          <span class="pf-metric">12 PRODUCTS · MULTI-TAB ANALYSIS</span>
+          <h3>OnBuy — Marketplace Sales</h3>
+          <p>Steady listing-led growth, supported by our own OnBuy tools.</p>
         </div>
       </div>
+
       <div class="pf-item reveal">
-        <div class="pf-cover pf-c4">eBay UK · Listing SEO</div>
+        <div class="pf-graph">
+          <div class="pf-graph-head"><span class="pf-mkt">EBAY · UK / USA / AU</span><span class="pf-badge">SALES</span></div>
+          <svg viewBox="0 0 420 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="eBay sales trend rising">
+            <g stroke="#E8EDEB" stroke-width="1"><line x1="0" y1="35" x2="420" y2="35"/><line x1="0" y1="70" x2="420" y2="70"/><line x1="0" y1="105" x2="420" y2="105"/></g>
+            <path d="M10,118 L70,124 L130,104 L190,98 L250,102 L310,70 L370,60 L410,44 L410,140 L10,140 Z" fill="rgba(232,163,61,.14)"/>
+            <path d="M10,118 L70,124 L130,104 L190,98 L250,102 L310,70 L370,60 L410,44" fill="none" stroke="#E8A33D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="410" cy="44" r="5" fill="#E8A33D"/>
+            <g fill="#8AA19B" font-family="IBM Plex Mono, monospace" font-size="10"><text x="10" y="148">JAN</text><text x="195" y="148">MAR</text><text x="385" y="148">JUN</text></g>
+          </svg>
+        </div>
         <div class="pf-body">
-          <h3>Fitness Product Listing Rebuild</h3>
-          <p>SEO title rewrites and structured, benefit-led description for an underperforming listing.</p>
-          <span class="pf-metric">FULL SEO REWRITE</span>
+          <h3>eBay — Dropshipping</h3>
+          <p>Multi-region order growth from optimised listings.</p>
         </div>
       </div>
-      <div class="pf-item reveal">
-        <div class="pf-cover pf-c5">Multi-Marketplace · Automation</div>
-        <div class="pf-body">
-          <h3>Marketplace Research Engine</h3>
-          <p>Custom product research platform — trend detection, health scoring, AI recommendations.</p>
-          <span class="pf-metric">FASTAPI · POSTGRESQL · NEXT.JS</span>
-        </div>
-      </div>
-      <div class="pf-item reveal">
-        <div class="pf-cover pf-c6">Content · Automation</div>
-        <div class="pf-body">
-          <h3>Social Content Pipeline</h3>
-          <p>Automated content workflow for the "Ecommerce With Ikram" brand using AI + scheduling tools.</p>
-          <span class="pf-metric">AI-POWERED · MULTI-PLATFORM</span>
-        </div>
-      </div>
+
     </div>
-    <div style="text-align:center;margin-top:34px">
-      <a class="btn btn-ghost" href="results.html">See detailed case studies →</a>
-    </div>
+    <p style="margin-top:18px;font-family:var(--mono);font-size:.75rem;color:var(--muted);text-align:center">SAMPLE DATA — DETAILED ACCOUNT GRAPHS COMING SOON</p>
   </div>
 </section>
 
-<!-- FAQ -->
-<section style="padding-top:0;margin-top:76px">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Common Questions</span>
-      <h2>Before you ask</h2>
-    </div>
-    <details><summary>Do you work with new sellers or only established accounts?</summary><p>Both. New sellers get setup, product research and launch support. Established sellers usually start with an audit of PPC, listings or account health.</p></details>
-    <details><summary>Which marketplaces and regions do you cover?</summary><p>Amazon (UK, USA, Australia), eBay (all regions), TikTok Shop (UK, USA), OnBuy (UK), plus Etsy, Shopify and Walmart Marketplace setup and management.</p></details>
-    <details><summary>How do you price your services?</summary><p>Per-project or monthly, agreed upfront after the free audit. No surprise fees, no long lock-in contracts.</p></details>
-    <details><summary>What do you need from me to start?</summary><p>For audits: your marketplace reports (e.g. Search Term, Targeting and Advertised Product reports for Amazon PPC). For new projects: your goals, budget and constraints. I'll guide you step by step.</p></details>
-  </div>
-</section>
+
 
 <!-- CONTACT US -->
 <section id="contact" style="padding-top:0">
@@ -557,18 +555,7 @@ footer a:hover{color:var(--amber)}
   </div>
 </section>
 
-<!-- CTA -->
-<section style="padding-top:0">
-  <div class="container">
-    <div class="cta-band reveal">
-      <div>
-        <h2>Ready to grow your marketplace business?</h2>
-        <p>Send your store details or goals and get an honest, data-backed starting point — direct from the operator.</p>
-      </div>
-      <a class="btn btn-amber" href="contact.html">Contact Us</a>
-    </div>
-  </div>
-</section>
+
 
 <footer>
   <div class="container">
@@ -591,7 +578,6 @@ footer a:hover{color:var(--amber)}
         <h4>Company</h4>
         <ul>
           <li><a href="about.html">About Ikram</a></li>
-          <li><a href="results.html">Results &amp; Case Studies</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>

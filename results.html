@@ -224,6 +224,14 @@ footer a:hover{color:var(--amber)}
 .home-contact input,.home-contact select,.home-contact textarea{border-color:transparent}
 @media(max-width:920px){.home-contact{grid-template-columns:1fr;padding:32px 24px}}
 
+
+/* ---------- Portfolio graph cards ---------- */
+.pf-graph{background:#FAFBFA;border-bottom:1px solid var(--line);padding:16px 16px 8px}
+.pf-graph svg{width:100%;height:auto;display:block}
+.pf-graph-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.pf-mkt{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--petrol);font-weight:700}
+.pf-badge{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;background:var(--petrol);color:#fff;padding:3px 8px;border-radius:5px}
+
 </style>
 </head>
 <body>
@@ -236,7 +244,6 @@ footer a:hover{color:var(--amber)}
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="results.html" class="active">Results</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
       </ul>
@@ -322,17 +329,7 @@ footer a:hover{color:var(--amber)}
 </section>
 
 <!-- CTA -->
-<section style="padding-top:0">
-  <div class="container">
-    <div class="cta-band reveal">
-      <div>
-        <h2>Want results like these on your account?</h2>
-        <p>Get in touch — you will get an honest diagnosis and priority list before spending anything.</p>
-      </div>
-      <a class="btn btn-amber" href="contact.html">Contact Us</a>
-    </div>
-  </div>
-</section>
+
 
 <footer>
   <div class="container">
@@ -355,7 +352,6 @@ footer a:hover{color:var(--amber)}
         <h4>Company</h4>
         <ul>
           <li><a href="about.html">About Ikram</a></li>
-          <li><a href="results.html">Results &amp; Case Studies</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
