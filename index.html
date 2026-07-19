@@ -241,49 +241,52 @@ footer a:hover{color:var(--amber)}
 
 
 
-/* ---------- Services Ring (wheel) ---------- */
-.ring-stage{position:relative;height:460px;width:100%;display:flex;align-items:center;justify-content:center;cursor:grab;touch-action:pan-y}
+
+
+
+/* ---------- 3D Services Ring (v11 — Our Services Universe) ---------- */
+.ring-stage{position:relative;height:440px;margin-top:30px;perspective:1200px;display:flex;align-items:center;justify-content:center;cursor:grab;touch-action:pan-y}
 .ring-stage:active{cursor:grabbing}
-/* the visible ring band */
-.wheel{position:absolute;width:400px;height:400px;border-radius:50%;
-  border:56px solid rgba(255,255,255,.08);
-  box-shadow:
-    0 0 0 2px rgba(232,163,61,.55),               /* outer gold edge */
-    inset 0 0 0 2px rgba(232,163,61,.55),          /* inner gold edge */
-    0 0 70px -12px rgba(127,224,176,.35),
-    inset 0 0 34px rgba(0,0,0,.35);
-  background:transparent;will-change:transform}
-.wheel::after{content:"";position:absolute;inset:-56px;border-radius:50%;
-  background:conic-gradient(from 0deg, rgba(232,163,61,.16), rgba(127,224,176,.14), rgba(232,163,61,.16), rgba(127,224,176,.14), rgba(232,163,61,.16));
-  -webkit-mask:radial-gradient(circle, transparent 62%, #000 63%, #000 98%, transparent 99%);
-  mask:radial-gradient(circle, transparent 62%, #000 63%, #000 98%, transparent 99%)}
-/* services sitting ON the band */
-.wheel-items{position:absolute;width:1px;height:1px;top:50%;left:50%}
-.w-item{position:absolute;top:0;left:0;width:112px;margin-left:-56px;margin-top:-30px;text-align:center;text-decoration:none;color:#fff;will-change:transform}
-.w-item b{display:block;font-family:var(--display);font-size:.95rem;letter-spacing:-.01em;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.55)}
-.w-item span{display:block;margin-top:3px;font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;color:#7FE0B0;text-transform:uppercase}
-.w-item:hover b{color:var(--amber)}
-.ring-hub{position:absolute;z-index:2;width:158px;height:158px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#1E7A5A,#0B2E33 75%);border:2px solid rgba(232,163,61,.65);box-shadow:0 0 60px -8px rgba(127,224,176,.4), inset 0 0 40px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;text-align:center;pointer-events:none}
-.ring-hub-inner strong{display:block;font-family:var(--display);font-size:1.05rem;color:#fff;letter-spacing:-.02em}
-.ring-hub-top,.ring-hub-bottom{display:block;font-family:var(--mono);font-size:.56rem;letter-spacing:.2em;color:#7FE0B0}
-.ring-hub-top{margin-bottom:5px}
-.ring-hub-bottom{margin-top:6px;color:var(--amber)}
-.ring-hint{position:absolute;bottom:0;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;color:rgba(185,210,203,.65);pointer-events:none}
+.ring3d{position:absolute;width:1px;height:1px;top:50%;left:50%;transform-style:preserve-3d;will-change:transform}
+@keyframes ringspin{from{transform:rotateX(-8deg) rotateY(0deg)}to{transform:rotateX(-8deg) rotateY(360deg)}}
+.ring-item{position:absolute;top:50%;left:50%;width:190px;margin-left:-95px;margin-top:-56px;padding:20px 16px;border-radius:14px;text-align:center;text-decoration:none;backface-visibility:hidden;background:linear-gradient(160deg,rgba(255,255,255,.13),rgba(255,255,255,.05));border:1px solid rgba(127,224,176,.35);backdrop-filter:blur(4px);color:#EAF4F1;transition:border-color .2s}
+.ring-item:hover{border-color:var(--amber)}
+.ring-item b{display:block;font-family:var(--display);font-size:1.05rem;color:#fff;letter-spacing:-.01em}
+.ring-item span{display:block;margin-top:6px;font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:#7FE0B0;text-transform:uppercase}
+.ri-1{transform:rotateY(0deg) translateZ(330px)}
+.ri-2{transform:rotateY(45deg) translateZ(330px)}
+.ri-3{transform:rotateY(90deg) translateZ(330px)}
+.ri-4{transform:rotateY(135deg) translateZ(330px)}
+.ri-5{transform:rotateY(180deg) translateZ(330px)}
+.ri-6{transform:rotateY(225deg) translateZ(330px)}
+.ri-7{transform:rotateY(270deg) translateZ(330px)}
+.ri-8{transform:rotateY(315deg) translateZ(330px)}
+.ring-hub{position:relative;z-index:2;width:190px;height:190px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#1E7A5A,#0B2E33 75%);border:2px solid rgba(232,163,61,.6);box-shadow:0 0 60px -10px rgba(127,224,176,.35), inset 0 0 40px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;text-align:center}
+.ring-hub-inner strong{display:block;font-family:var(--display);font-size:1.25rem;color:#fff;letter-spacing:-.02em}
+.ring-hub-top,.ring-hub-bottom{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;color:#7FE0B0}
+.ring-hub-top{margin-bottom:6px}
+.ring-hub-bottom{margin-top:8px;color:var(--amber)}
 @media(max-width:920px){
-  .ring-stage{height:400px;margin-top:16px}
-  .wheel{width:320px;height:320px;border-width:46px}
-  .wheel::after{inset:-46px}
-  .ring-hub{width:128px;height:128px}
-  .w-item{width:96px;margin-left:-48px;margin-top:-26px}
-  .w-item b{font-size:.8rem}.w-item span{font-size:.52rem}
+  .ring-stage{height:380px}
+  .ring-item{width:150px;margin-left:-75px;padding:14px 10px}
+  .ri-1{transform:rotateY(0deg) translateZ(230px)}.ri-2{transform:rotateY(45deg) translateZ(230px)}
+  .ri-3{transform:rotateY(90deg) translateZ(230px)}.ri-4{transform:rotateY(135deg) translateZ(230px)}
+  .ri-5{transform:rotateY(180deg) translateZ(230px)}.ri-6{transform:rotateY(225deg) translateZ(230px)}
+  .ri-7{transform:rotateY(270deg) translateZ(230px)}.ri-8{transform:rotateY(315deg) translateZ(230px)}
+  .ring-hub{width:150px;height:150px}
 }
 @media(max-width:640px){
-  .ring-stage{height:340px}
-  .wheel{width:260px;height:260px;border-width:40px}
-  .wheel::after{inset:-40px}
-  .ring-hub{width:104px;height:104px}
-  .ring-hub-inner strong{font-size:.86rem}
+  .ring-stage{height:330px}
+  .ring-item{width:126px;margin-left:-63px}
+  .ring-item b{font-size:.9rem}
+  .ri-1{transform:rotateY(0deg) translateZ(170px)}.ri-2{transform:rotateY(45deg) translateZ(170px)}
+  .ri-3{transform:rotateY(90deg) translateZ(170px)}.ri-4{transform:rotateY(135deg) translateZ(170px)}
+  .ri-5{transform:rotateY(180deg) translateZ(170px)}.ri-6{transform:rotateY(225deg) translateZ(170px)}
+  .ri-7{transform:rotateY(270deg) translateZ(170px)}.ri-8{transform:rotateY(315deg) translateZ(170px)}
+  .ring-hub{width:120px;height:120px}
+  .ring-hub-inner strong{font-size:1rem}
 }
+
 
 </style>
 <script type="application/ld+json">
@@ -328,28 +331,34 @@ footer a:hover{color:var(--amber)}
       </div>
       <p class="hero-note">No lock-in contracts · Direct communication · Evidence before advice</p>
     </div>
-    <div class="ring-stage" id="ringStage" aria-label="Services ring — move your mouse to spin">
-      <div class="wheel" id="wheelBand"></div>
-      <div class="wheel-items" id="wheelItems">
-        <a class="w-item" href="services.html#amazon"><b>Amazon</b><span>WS · PL · WL</span></a>
-        <a class="w-item" href="services.html#tiktok"><b>TikTok Shop</b><span>White Label</span></a>
-        <a class="w-item" href="services.html#ebay"><b>eBay</b><span>Dropshipping</span></a>
-        <a class="w-item" href="services.html#onbuy"><b>OnBuy</b><span>Automation</span></a>
-        <a class="w-item" href="services.html#other"><b>Etsy</b><span>Store · SEO</span></a>
-        <a class="w-item" href="services.html#other"><b>Shopify</b><span>Development</span></a>
-        <a class="w-item" href="services.html#other"><b>Walmart</b><span>Marketplace</span></a>
-        <a class="w-item" href="services.html#va"><b>VA</b><span>All Markets</span></a>
-      </div>
-      <div class="ring-hub">
-        <div class="ring-hub-inner">
-          <span class="ring-hub-top">ECOMMERCE</span>
-          <strong>With Ikram</strong>
-          <span class="ring-hub-bottom">8 SERVICES</span>
-        </div>
-      </div>
-      <div class="ring-hint">⟲ MOVE MOUSE TO SPIN THE RING</div>
-    </div>
-    </div>
+    <div class="ledger reveal" aria-label="Account performance graph">
+      <svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ACOS decreasing from 88% to 69% and conversion rate rising from 4.8% to 6.4%">
+        <g stroke="rgba(220,234,230,.14)" stroke-width="1">
+          <line x1="50" y1="40" x2="440" y2="40"/><line x1="50" y1="90" x2="440" y2="90"/>
+          <line x1="50" y1="140" x2="440" y2="140"/><line x1="50" y1="190" x2="440" y2="190"/>
+          <line x1="50" y1="240" x2="440" y2="240"/>
+        </g>
+        <g fill="#9DBBB4" font-family="IBM Plex Mono, monospace" font-size="11">
+          <text x="12" y="44">90%</text><text x="12" y="94">80%</text>
+          <text x="12" y="144">75%</text><text x="12" y="194">70%</text><text x="12" y="244">65%</text>
+        </g>
+        <g fill="#9DBBB4" font-family="IBM Plex Mono, monospace" font-size="11">
+          <text x="55" y="266">W1</text><text x="130" y="266">W2</text><text x="205" y="266">W3</text>
+          <text x="280" y="266">W4</text><text x="355" y="266">W5</text><text x="422" y="266">W6</text>
+        </g>
+        <path d="M60,50 L135,72 L210,120 L285,150 L360,185 L430,212 L430,240 L60,240 Z" fill="rgba(232,163,61,.14)"/>
+        <path d="M60,50 L135,72 L210,120 L285,150 L360,185 L430,212" fill="none" stroke="#E8A33D" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <g fill="#E8A33D"><circle cx="60" cy="50" r="5"/><circle cx="430" cy="212" r="5"/></g>
+        <path d="M60,205 L135,200 L210,188 L285,172 L360,158 L430,148" fill="none" stroke="#7FE0B0" stroke-width="3" stroke-linecap="round"/>
+        <g fill="#7FE0B0"><circle cx="60" cy="205" r="4.5"/><circle cx="430" cy="148" r="4.5"/></g>
+        <g font-family="IBM Plex Mono, monospace" font-size="13" font-weight="700">
+          <text x="60" y="34" fill="#E8A33D">ACOS 88%</text>
+          <text x="342" y="200" fill="#E8A33D">69%</text>
+          <text x="60" y="228" fill="#7FE0B0">CVR 4.8%</text>
+          <text x="352" y="138" fill="#7FE0B0">6.4%</text>
+        </g>
+      </svg>
+      <div class="ledger-row" style="margin-top:10px"><span class="k">amazon_au · sponsored_products</span><span class="v up">6-week restructure</span></div>
     </div>
     </div>
   </div>
@@ -387,41 +396,37 @@ footer a:hover{color:var(--amber)}
   </div>
 </section>
 
-<!-- PERFORMANCE -->
-<section id="performance">
+<!-- SERVICES RING (3D) -->
+<section id="services-ring" style="background:linear-gradient(135deg,#0B2E33 0%,#0E3A40 60%,#155A5E 100%);overflow:hidden">
   <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Live Performance</span>
-      <h2>Real account data, not marketing claims</h2>
+    <div class="section-head" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="eyebrow" style="color:#7FE0B0">What We Do</span>
+      <h2 style="color:#fff">Our Services Universe</h2>
+      <p class="lead" style="color:#B9D2CB;margin:14px auto 0">Every marketplace we operate — rotating around one operator. Hover to pause, tap any panel to explore.</p>
     </div>
-    <div class="ledger reveal" style="max-width:640px">
-      <svg viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ACOS decreasing from 88% to 69% and conversion rate rising from 4.8% to 6.4% over six periods">
-        <g stroke="rgba(220,234,230,.14)" stroke-width="1">
-          <line x1="50" y1="40" x2="440" y2="40"/><line x1="50" y1="90" x2="440" y2="90"/>
-          <line x1="50" y1="140" x2="440" y2="140"/><line x1="50" y1="190" x2="440" y2="190"/>
-          <line x1="50" y1="240" x2="440" y2="240"/>
-        </g>
-        <g fill="#9DBBB4" font-family="IBM Plex Mono, monospace" font-size="11">
-          <text x="12" y="44">90%</text><text x="12" y="94">80%</text>
-          <text x="12" y="144">75%</text><text x="12" y="194">70%</text><text x="12" y="244">65%</text>
-        </g>
-        <g fill="#9DBBB4" font-family="IBM Plex Mono, monospace" font-size="11">
-          <text x="55" y="266">W1</text><text x="130" y="266">W2</text><text x="205" y="266">W3</text>
-          <text x="280" y="266">W4</text><text x="355" y="266">W5</text><text x="422" y="266">W6</text>
-        </g>
-        <path d="M60,50 L135,72 L210,120 L285,150 L360,185 L430,212 L430,240 L60,240 Z" fill="rgba(232,163,61,.14)"/>
-        <path d="M60,50 L135,72 L210,120 L285,150 L360,185 L430,212" fill="none" stroke="#E8A33D" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <g fill="#E8A33D"><circle cx="60" cy="50" r="5"/><circle cx="430" cy="212" r="5"/></g>
-        <path d="M60,205 L135,200 L210,188 L285,172 L360,158 L430,148" fill="none" stroke="#7FE0B0" stroke-width="3" stroke-linecap="round"/>
-        <g fill="#7FE0B0"><circle cx="60" cy="205" r="4.5"/><circle cx="430" cy="148" r="4.5"/></g>
-        <g font-family="IBM Plex Mono, monospace" font-size="13" font-weight="700">
-          <text x="60" y="34" fill="#E8A33D">ACOS 88%</text>
-          <text x="342" y="200" fill="#E8A33D">69%</text>
-          <text x="60" y="228" fill="#7FE0B0">CVR 4.8%</text>
-          <text x="352" y="138" fill="#7FE0B0">6.4%</text>
-        </g>
-      </svg>
-      <div class="ledger-row" style="margin-top:10px"><span class="k">amazon_au · sponsored_products</span><span class="v up">6-week restructure</span></div>
+
+    <div class="ring-stage" id="ringStage">
+      <div class="ring-hub">
+        <div class="ring-hub-inner">
+          <span class="ring-hub-top">ECOMMERCE</span>
+          <strong>With Ikram</strong>
+          <span class="ring-hub-bottom">8 SERVICE LINES</span>
+        </div>
+      </div>
+      <div class="ring3d" id="ring3d">
+        <a class="ring-item ri-1" href="services.html#amazon"><b>Amazon</b><span>Wholesale · PL · WL</span></a>
+        <a class="ring-item ri-2" href="services.html#tiktok"><b>TikTok Shop</b><span>White Label Growth</span></a>
+        <a class="ring-item ri-3" href="services.html#ebay"><b>eBay</b><span>Dropshipping</span></a>
+        <a class="ring-item ri-4" href="services.html#onbuy"><b>OnBuy</b><span>Selling &amp; Automation</span></a>
+        <a class="ring-item ri-5" href="services.html#other"><b>Etsy</b><span>Store &amp; SEO</span></a>
+        <a class="ring-item ri-6" href="services.html#other"><b>Shopify</b><span>Development</span></a>
+        <a class="ring-item ri-7" href="services.html#other"><b>Walmart</b><span>Marketplace</span></a>
+        <a class="ring-item ri-8" href="services.html#va"><b>Virtual Assistant</b><span>All Marketplaces</span></a>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:26px">
+      <a class="btn btn-amber" href="services.html">Explore All Services</a>
     </div>
   </div>
 </section>
@@ -659,39 +664,33 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Services ring wheel — auto-rotate + mouse-driven spin, labels stay upright
+
+// Services Universe ring — auto-rotate + cursor-driven spin (forward & backward)
 (function(){
   var stage = document.getElementById('ringStage');
-  var band = document.getElementById('wheelBand');
-  var wrap = document.getElementById('wheelItems');
-  if (!stage || !band || !wrap) return;
-  var items = wrap.querySelectorAll('.w-item');
-  function radius(){
-    if (window.innerWidth <= 640) return 150;   /* band centre ≈ (260+2*40)/2 - 40/2 */
-    if (window.innerWidth <= 920) return 183;
-    return 228;
-  }
-  var angle = 0, autoSpeed = 0.10, extra = 0, lastX = null;
+  var ring = document.getElementById('ring3d');
+  if (!stage || !ring) return;
+  var items = ring.querySelectorAll('.ring-item');
+  var angle = 0, extra = 0, lastX = null, hoverPause = false;
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   stage.addEventListener('pointermove', function(e){
-    if (lastX !== null) extra += (e.clientX - lastX) * 0.4;
+    if (lastX !== null) extra += (e.clientX - lastX) * 0.35; /* right = forward, left = backward */
     lastX = e.clientX;
   });
   stage.addEventListener('pointerleave', function(){ lastX = null; });
   stage.addEventListener('pointerdown', function(e){ lastX = e.clientX; });
 
+  items.forEach(function(it){
+    it.addEventListener('pointerenter', function(){ hoverPause = true; });
+    it.addEventListener('pointerleave', function(){ hoverPause = false; });
+  });
+
   function frame(){
-    if (!reduced) angle += autoSpeed;
+    if (!reduced && !hoverPause) angle += 0.12; /* gentle auto-rotate */
     angle += extra * 0.12;
     extra *= 0.88;
-    band.style.transform = 'rotate(' + angle + 'deg)';
-    var r = radius();
-    items.forEach(function(it, i){
-      var a = (i * 45 + angle) * Math.PI / 180;
-      var x = Math.cos(a) * r, y = Math.sin(a) * r;
-      it.style.transform = 'translate(' + x + 'px,' + y + 'px)';
-    });
+    ring.style.transform = 'rotateX(-8deg) rotateY(' + angle + 'deg)';
     requestAnimationFrame(frame);
   }
   requestAnimationFrame(frame);
