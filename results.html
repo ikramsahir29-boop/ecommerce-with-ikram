@@ -109,12 +109,15 @@ section{padding:76px 0}
 .card-link:hover{color:var(--amber)}
 
 /* ---------- Stats band ---------- */
-.stats{background:var(--amber);padding:44px 0}
-.stats .n{color:var(--ink) !important}
-.stats .l{color:#5E4A1E !important;font-weight:600}
-.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}
-.stat .n{font-family:var(--mono);font-size:2rem;font-weight:700;color:var(--petrol)}
-.stat .l{font-size:.85rem;color:var(--muted);margin-top:4px}
+.stats{background:linear-gradient(120deg,#E8A33D 0%,#DD9430 60%,#D08722 100%);padding:38px 0;position:relative;overflow:hidden}
+.stats::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 200px at 15% 0%,rgba(255,255,255,.22),transparent 60%)}
+.stats .n{color:var(--ink) !important;font-size:2.6rem;font-weight:700;font-family:var(--display);letter-spacing:-.02em}
+.stats .l{color:#4A3A14 !important;font-weight:700;font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin-top:6px}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;text-align:center;position:relative}
+.stats-grid .stat{padding:8px 20px}
+.stats-grid .stat + .stat{border-left:1.5px solid rgba(20,32,30,.22)}
+.stat .n{font-family:var(--display);font-size:2.7rem;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
+.stat .l{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#4A3A14;font-weight:700;margin-top:8px}
 
 /* ---------- Process ---------- */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:step}
@@ -185,7 +188,6 @@ footer a:hover{color:var(--amber)}
 /* ---------- Responsive ---------- */
 @media(max-width:920px){
   .hero-grid,.grid-3,.steps,.foot-grid{grid-template-columns:1fr 1fr}
-  .stats-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:640px){
   .hero-grid,.grid-3,.grid-2,.steps,.foot-grid{grid-template-columns:1fr}
@@ -242,7 +244,7 @@ footer a:hover{color:var(--amber)}
 
 
 /* ---------- 3D Services Ring (v11 — Our Services Universe) ---------- */
-.ring-stage{position:relative;height:440px;margin-top:30px;perspective:1200px;display:flex;align-items:center;justify-content:center;cursor:grab;touch-action:pan-y}
+.ring-stage{position:relative;height:500px;margin-top:100px;perspective:1200px;display:flex;align-items:center;justify-content:center;cursor:grab;touch-action:pan-y}
 .ring-stage:active{cursor:grabbing}
 .ring3d{position:absolute;width:1px;height:1px;top:50%;left:50%;transform-style:preserve-3d;will-change:transform}
 @keyframes ringspin{from{transform:rotateX(-8deg) rotateY(0deg)}to{transform:rotateX(-8deg) rotateY(360deg)}}
@@ -258,9 +260,9 @@ footer a:hover{color:var(--amber)}
 .ri-6{transform:rotateY(225deg) translateZ(330px)}
 .ri-7{transform:rotateY(270deg) translateZ(330px)}
 .ri-8{transform:rotateY(315deg) translateZ(330px)}
-.ring-hub{position:relative;z-index:2;width:190px;height:190px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#1E7A5A,#0B2E33 75%);border:2px solid rgba(232,163,61,.6);box-shadow:0 0 60px -10px rgba(127,224,176,.35), inset 0 0 40px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;text-align:center}
-.ring-hub-inner strong{display:block;font-family:var(--display);font-size:1.25rem;color:#fff;letter-spacing:-.02em}
-.ring-hub-top,.ring-hub-bottom{display:block;font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;color:#7FE0B0}
+.ring-hub{position:relative;z-index:2;width:230px;height:230px;transform:translateY(-185px);border-radius:50%;background:radial-gradient(circle at 35% 30%,#1E7A5A,#0B2E33 75%);border:2px solid rgba(232,163,61,.6);box-shadow:0 0 60px -10px rgba(127,224,176,.35), inset 0 0 40px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;text-align:center}
+.ring-hub-inner strong{display:block;font-family:var(--display);font-size:1.5rem;color:#fff;letter-spacing:-.02em}
+.ring-hub-top,.ring-hub-bottom{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;color:#7FE0B0}
 .ring-hub-top{margin-bottom:6px}
 .ring-hub-bottom{margin-top:8px;color:var(--amber)}
 @media(max-width:920px){
@@ -270,7 +272,7 @@ footer a:hover{color:var(--amber)}
   .ri-3{transform:rotateY(90deg) translateZ(230px)}.ri-4{transform:rotateY(135deg) translateZ(230px)}
   .ri-5{transform:rotateY(180deg) translateZ(230px)}.ri-6{transform:rotateY(225deg) translateZ(230px)}
   .ri-7{transform:rotateY(270deg) translateZ(230px)}.ri-8{transform:rotateY(315deg) translateZ(230px)}
-  .ring-hub{width:150px;height:150px}
+  .ring-hub{width:180px;height:180px;transform:translateY(-148px)}
 }
 @media(max-width:640px){
   .ring-stage{height:330px}
@@ -280,10 +282,23 @@ footer a:hover{color:var(--amber)}
   .ri-3{transform:rotateY(90deg) translateZ(170px)}.ri-4{transform:rotateY(135deg) translateZ(170px)}
   .ri-5{transform:rotateY(180deg) translateZ(170px)}.ri-6{transform:rotateY(225deg) translateZ(170px)}
   .ri-7{transform:rotateY(270deg) translateZ(170px)}.ri-8{transform:rotateY(315deg) translateZ(170px)}
-  .ring-hub{width:120px;height:120px}
+  .ring-hub{width:145px;height:145px;transform:translateY(-110px)}
   .ring-hub-inner strong{font-size:1rem}
 }
 
+
+@media(max-width:560px){
+  .stats-grid{grid-template-columns:1fr}
+  .stats-grid .stat + .stat{border-left:none;border-top:1.5px solid rgba(20,32,30,.22)}
+  .stats-grid .stat{padding:16px 20px}
+}
+
+@media(max-width:640px){
+  .stats-grid{flex-direction:column;align-items:center;gap:18px}
+  .stat{max-width:none;padding:6px 10px}
+  .stat + .stat::before{display:none}
+  .stat + .stat{border-top:1.5px solid rgba(20,32,30,.25);padding-top:20px}
+}
 
 </style>
 </head>
@@ -291,7 +306,7 @@ footer a:hover{color:var(--amber)}
 
 <header>
   <div class="container nav">
-    <a class="logo" href="index.html"><span class="dot"></span><span class="ew">Ecommerce With</span>&nbsp;Ikram</a>
+    <a class="logo" href="index.html"><span class="dot"></span><span><span class="ew">Ecommerce With</span> Ikram</span></a>
     <nav aria-label="Main">
       <button class="burger" aria-expanded="false" aria-label="Menu">☰</button>
       <ul>
@@ -388,7 +403,7 @@ footer a:hover{color:var(--amber)}
   <div class="container">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a class="logo" href="index.html" style="color:#fff"><span class="dot"></span>Ecommerce With Ikram</a>
+        <a class="logo" href="index.html" style="color:#fff"><span class="dot"></span><span>Ecommerce With Ikram</span></a>
         <p>Marketplace growth services from a working seller — Amazon, eBay, TikTok Shop and OnBuy across UK, USA and Australia.</p>
       </div>
       <div>
