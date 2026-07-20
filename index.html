@@ -247,7 +247,7 @@ footer a:hover{color:var(--amber)}
 
 
 /* ---------- 3D Services Ring (v11 — Our Services Universe) ---------- */
-.ring-stage{position:relative;height:500px;margin-top:100px;perspective:1200px;display:flex;align-items:center;justify-content:center;cursor:grab;touch-action:pan-y}
+.ring-stage{position:relative;height:400px;margin-top:0;perspective:1200px;display:flex;align-items:center;justify-content:center;cursor:grab;touch-action:pan-y}
 .ring-stage:active{cursor:grabbing}
 .ring3d{position:absolute;width:1px;height:1px;top:50%;left:50%;transform-style:preserve-3d;will-change:transform}
 @keyframes ringspin{from{transform:rotateX(-8deg) rotateY(0deg)}to{transform:rotateX(-8deg) rotateY(360deg)}}
@@ -263,7 +263,8 @@ footer a:hover{color:var(--amber)}
 .ri-6{transform:rotateY(225deg) translateZ(330px)}
 .ri-7{transform:rotateY(270deg) translateZ(330px)}
 .ri-8{transform:rotateY(315deg) translateZ(330px)}
-.ring-hub{position:relative;z-index:2;width:230px;height:230px;transform:translateY(-185px);border-radius:50%;background:radial-gradient(circle at 35% 30%,#1E7A5A,#0B2E33 75%);border:2px solid rgba(232,163,61,.6);box-shadow:0 0 60px -10px rgba(127,224,176,.35), inset 0 0 40px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;text-align:center}
+.hub-row{display:flex;justify-content:center;margin:8px 0 18px}
+.ring-hub{position:relative;z-index:2;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#1E7A5A,#0B2E33 75%);border:2px solid rgba(232,163,61,.6);box-shadow:0 0 60px -10px rgba(127,224,176,.35), inset 0 0 40px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;text-align:center}
 .ring-hub-inner strong{display:block;font-family:var(--display);font-size:1.5rem;color:#fff;letter-spacing:-.02em}
 .ring-hub-top,.ring-hub-bottom{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;color:#7FE0B0}
 .ring-hub-top{margin-bottom:6px}
@@ -275,17 +276,17 @@ footer a:hover{color:var(--amber)}
   .ri-3{transform:rotateY(90deg) translateZ(230px)}.ri-4{transform:rotateY(135deg) translateZ(230px)}
   .ri-5{transform:rotateY(180deg) translateZ(230px)}.ri-6{transform:rotateY(225deg) translateZ(230px)}
   .ri-7{transform:rotateY(270deg) translateZ(230px)}.ri-8{transform:rotateY(315deg) translateZ(230px)}
-  .ring-hub{width:180px;height:180px;transform:translateY(-148px)}
+  .ring-hub{width:180px;height:180px}
 }
 @media(max-width:640px){
-  .ring-stage{height:330px}
+  .ring-stage{height:300px}
   .ring-item{width:126px;margin-left:-63px}
   .ring-item b{font-size:.9rem}
   .ri-1{transform:rotateY(0deg) translateZ(170px)}.ri-2{transform:rotateY(45deg) translateZ(170px)}
   .ri-3{transform:rotateY(90deg) translateZ(170px)}.ri-4{transform:rotateY(135deg) translateZ(170px)}
   .ri-5{transform:rotateY(180deg) translateZ(170px)}.ri-6{transform:rotateY(225deg) translateZ(170px)}
   .ri-7{transform:rotateY(270deg) translateZ(170px)}.ri-8{transform:rotateY(315deg) translateZ(170px)}
-  .ring-hub{width:145px;height:145px;transform:translateY(-110px)}
+  .ring-hub{width:145px;height:145px}
   .ring-hub-inner strong{font-size:1rem}
 }
 
@@ -336,13 +337,15 @@ footer a:hover{color:var(--amber)}
 <!-- HERO (ring first, right under the nav) -->
 <section class="hero" style="padding-top:24px;padding-bottom:40px">
   <div class="container">
-    <div class="ring-stage" id="ringStage" style="margin-top:0">
+    <div class="hub-row">
       <div class="ring-hub">
         <div class="ring-hub-inner">
           <span class="ring-hub-top">ECOMMERCE</span>
           <strong>With Ikram</strong>
-          </div>
+        </div>
       </div>
+    </div>
+    <div class="ring-stage" id="ringStage" style="margin-top:0">
       <div class="ring3d" id="ring3d">
         <a class="ring-item ri-1" href="services.html#amazon"><b>Amazon</b><span>Wholesale · PL · WL</span></a>
         <a class="ring-item ri-2" href="services.html#tiktok"><b>TikTok Shop</b><span>White Label Growth</span></a>
@@ -356,7 +359,7 @@ footer a:hover{color:var(--amber)}
     </div>
   </div>
   <div class="container" style="text-align:center;margin-top:8px">
-    <span class="eyebrow">Real Seller · Real Results · Since 2021</span>
+    <span class="eyebrow">Real Seller · Real Results</span>
     <h1 style="max-width:880px;margin:0 auto;font-size:clamp(1.7rem,3.8vw,2.6rem)">Your marketplace growth, managed by someone who <em>actually sells</em>.</h1>
   </div>
 </section>
